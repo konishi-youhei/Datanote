@@ -46,6 +46,16 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        /** 以下を追加 **/
+        'user' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+        /** ここまで **/
     ],
 
     /*
@@ -75,6 +85,13 @@ return [
         //     'driver' => 'database',
         //     'table' => 'users',
         // ],
+
+        /** 以下を追加 **/
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+        /** ここまで **/
     ],
 
     /*
@@ -98,6 +115,13 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
         ],
+        /** 以下を追加 **/
+        'admins' => [
+            'provider' => 'admins',
+            'table' => 'password_resets',
+            'expire' => 60,
+        ],
+        /** ここまで **/
     ],
 
 ];
