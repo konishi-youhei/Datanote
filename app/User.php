@@ -38,9 +38,15 @@ class User extends Authenticatable
     ];
 
     /**
-     * チームとの1対多の関係に関する記述
+     * チームとの多対1の関係に関する記述
      */
     public function team(){
         return $this->belongsTo('App\Teams');
+    }
+    /**
+     * ノートとの1対多の関係に関する記述
+     */
+    public function notes(){
+        return $this->hasMany('App\Notes');
     }
 }
