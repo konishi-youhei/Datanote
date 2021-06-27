@@ -6,3 +6,55 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// tailwindの設定を追加
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// メディアクエリの設定
+$breakpoints: (
+    'sm':'screen and (max-width: 414px)',
+    'md':'screen and (max-width: 768px)',
+    'lg':'screen and (max-width: 1000px)',
+    'xl':'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: sm) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+.container{
+
+    // Sidebar
+    .sidebar{
+        border-right: solid 1px #dee2e6;
+        ul{
+            margin-top: 30px;
+            padding: 10px 5px;
+            li{
+                margin: 20px 0;
+            }
+        }
+    }
+    @include mq(sm) {
+
+    }
+    @include mq(md) {
+
+    }
+    @include mq(lg) {
+
+    }
+    @include mq(xl) {
+
+    }
+
+    // Input-area
+    .input-area{
+        border-right: solid 1px #dee2e6;
+        padding: 0;
+    }
+}

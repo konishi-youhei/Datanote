@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/new', 'HomeController@index')->name('new');
 
 // 'middleware'=>'auth:admin'を追加
 Route::group(['prefix' => 'admin', 'middleware'=>'auth:admin'], function(){
