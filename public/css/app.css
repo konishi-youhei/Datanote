@@ -42486,6 +42486,88 @@ video {
   padding: 0;
 }
 
+#app .container {
+  max-width: 3000px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#app .container .create-area {
+  padding: 0 !important;
+}
+
+#app .container .preview-img {
+  width: 600px;
+  height: 800px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-image: url("/images/soccer-court.jpeg");
+  background-size: contain;
+}
+
+#app .container .preview-img .circle {
+  margin: 0 auto;
+}
+
+#app .container .preview-img .member1 {
+  top: 20%;
+  left: 30%;
+}
+
+#app .container .preview-img .member2 {
+  top: 20%;
+  right: 30%;
+}
+
+#app .container .preview-img .member3 {
+  top: 40%;
+  left: 10%;
+}
+
+#app .container .preview-img .member4 {
+  top: 40%;
+  left: 30%;
+}
+
+#app .container .preview-img .member5 {
+  top: 40%;
+  right: 30%;
+}
+
+#app .container .preview-img .member6 {
+  top: 40%;
+  right: 10%;
+}
+
+#app .container .preview-img .member7 {
+  top: 60%;
+  left: 10%;
+}
+
+#app .container .preview-img .member8 {
+  top: 60%;
+  left: 30%;
+}
+
+#app .container .preview-img .member9 {
+  top: 60%;
+  right: 30%;
+}
+
+#app .container .preview-img .member10 {
+  top: 60%;
+  right: 10%;
+}
+
+#app .container .preview-img .member11 {
+  top: 80%;
+  left: 0;
+  right: 0;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;

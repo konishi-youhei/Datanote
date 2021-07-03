@@ -37625,6 +37625,271 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NotePreview.vue?vue&type=template&id=ae14b14a&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NotePreview.vue?vue&type=template&id=ae14b14a& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "konvajs-content" }, [
+    _c("div", { staticClass: "w-full h-full" }, [
+      _c("div", { staticClass: "w-full h-full relative" }, [
+        _c(
+          "div",
+          { staticClass: "bg-gray-400 absolute top-0 left-0 preview-img" },
+          [
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member1" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("大迫勇也")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member2" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("堂安律")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member3" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("中島翔哉")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member4" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("遠藤航")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member5" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("柴崎岳")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member6" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("久保建英")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member7" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("長友佑都")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member8" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("吉田麻也")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member9" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("冨安健洋")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member10" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("酒井宏樹")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "position-absolute text-center member11" },
+              [
+                _c("img", {
+                  staticClass: "circle",
+                  attrs: {
+                    src: "/images/circle-removebg-preview.png",
+                    alt: "",
+                    width: "50px"
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "p",
+                  { staticClass: "text-white font-medium mt-2 text-base" },
+                  [_vm._v("川島永嗣")]
+                )
+              ]
+            )
+          ]
+        )
+      ])
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js":
 /*!********************************************************************!*\
   !*** ./node_modules/vue-loader/lib/runtime/componentNormalizer.js ***!
@@ -49862,6 +50127,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
+Vue.component('note-preview', __webpack_require__(/*! ./components/NotePreview */ "./resources/js/components/NotePreview.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -49983,6 +50249,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/NotePreview.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/components/NotePreview.vue ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _NotePreview_vue_vue_type_template_id_ae14b14a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NotePreview.vue?vue&type=template&id=ae14b14a& */ "./resources/js/components/NotePreview.vue?vue&type=template&id=ae14b14a&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _NotePreview_vue_vue_type_template_id_ae14b14a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NotePreview_vue_vue_type_template_id_ae14b14a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/NotePreview.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/NotePreview.vue?vue&type=template&id=ae14b14a&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/components/NotePreview.vue?vue&type=template&id=ae14b14a& ***!
+  \********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotePreview_vue_vue_type_template_id_ae14b14a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./NotePreview.vue?vue&type=template&id=ae14b14a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NotePreview.vue?vue&type=template&id=ae14b14a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotePreview_vue_vue_type_template_id_ae14b14a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotePreview_vue_vue_type_template_id_ae14b14a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
