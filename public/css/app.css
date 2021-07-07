@@ -1,5 +1,319 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+#app .container .preview-img.one .member11 {
+  top: 20%;
+  left: 30%;
+}
+
+#app .container .preview-img.one .member10 {
+  top: 20%;
+  right: 30%;
+}
+
+#app .container .preview-img.one .member9 {
+  top: 40%;
+  left: 10%;
+}
+
+#app .container .preview-img.one .member8 {
+  top: 40%;
+  left: 30%;
+}
+
+#app .container .preview-img.one .member7 {
+  top: 40%;
+  right: 30%;
+}
+
+#app .container .preview-img.one .member6 {
+  top: 40%;
+  right: 10%;
+}
+
+#app .container .preview-img.one .member5 {
+  top: 60%;
+  left: 10%;
+}
+
+#app .container .preview-img.one .member4 {
+  top: 60%;
+  left: 30%;
+}
+
+#app .container .preview-img.one .member3 {
+  top: 60%;
+  right: 30%;
+}
+
+#app .container .preview-img.one .member2 {
+  top: 60%;
+  right: 10%;
+}
+
+#app .container .preview-img.one .member1 {
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.two .member11 {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.two .member10 {
+  top: 35%;
+  left: 10%;
+}
+
+#app .container .preview-img.two .member9 {
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.two .member8 {
+  top: 35%;
+  right: 10%;
+}
+
+#app .container .preview-img.two .member7 {
+  top: 45%;
+  left: 30%;
+}
+
+#app .container .preview-img.two .member6 {
+  top: 45%;
+  right: 30%;
+}
+
+#app .container .preview-img.two .member5 {
+  top: 60%;
+  left: 10%;
+}
+
+#app .container .preview-img.two .member4 {
+  top: 60%;
+  left: 30%;
+}
+
+#app .container .preview-img.two .member3 {
+  top: 60%;
+  right: 30%;
+}
+
+#app .container .preview-img.two .member2 {
+  top: 60%;
+  right: 10%;
+}
+
+#app .container .preview-img.two .member1 {
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.three .member11 {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.three .member10 {
+  top: 35%;
+  left: 10%;
+}
+
+#app .container .preview-img.three .member9 {
+  top: 35%;
+  left: 30%;
+}
+
+#app .container .preview-img.three .member8 {
+  top: 35%;
+  right: 30%;
+}
+
+#app .container .preview-img.three .member7 {
+  top: 35%;
+  right: 10%;
+}
+
+#app .container .preview-img.three .member6 {
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.three .member5 {
+  top: 60%;
+  left: 10%;
+}
+
+#app .container .preview-img.three .member4 {
+  top: 60%;
+  left: 30%;
+}
+
+#app .container .preview-img.three .member3 {
+  top: 60%;
+  right: 30%;
+}
+
+#app .container .preview-img.three .member2 {
+  top: 60%;
+  right: 10%;
+}
+
+#app .container .preview-img.three .member1 {
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.four .member11 {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.four .member10 {
+  top: 25%;
+  left: 15%;
+}
+
+#app .container .preview-img.four .member9 {
+  top: 25%;
+  right: 15%;
+}
+
+#app .container .preview-img.four .member8 {
+  top: 35%;
+  left: 30%;
+}
+
+#app .container .preview-img.four .member7 {
+  top: 35%;
+  right: 30%;
+}
+
+#app .container .preview-img.four .member6 {
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.four .member5 {
+  top: 60%;
+  left: 10%;
+}
+
+#app .container .preview-img.four .member4 {
+  top: 60%;
+  left: 30%;
+}
+
+#app .container .preview-img.four .member3 {
+  top: 60%;
+  right: 30%;
+}
+
+#app .container .preview-img.four .member2 {
+  top: 60%;
+  right: 10%;
+}
+
+#app .container .preview-img.four .member1 {
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.five .member11 {
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.five .member10 {
+  top: 25%;
+  left: 15%;
+}
+
+#app .container .preview-img.five .member9 {
+  top: 25%;
+  right: 15%;
+}
+
+#app .container .preview-img.five .member8 {
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
+#app .container .preview-img.five .member7 {
+  top: 45%;
+  left: 30%;
+}
+
+#app .container .preview-img.five .member6 {
+  top: 45%;
+  right: 30%;
+}
+
+#app .container .preview-img.five .member5 {
+  top: 60%;
+  left: 10%;
+}
+
+#app .container .preview-img.five .member4 {
+  top: 60%;
+  left: 30%;
+}
+
+#app .container .preview-img.five .member3 {
+  top: 60%;
+  right: 30%;
+}
+
+#app .container .preview-img.five .member2 {
+  top: 60%;
+  right: 10%;
+}
+
+#app .container .preview-img.five .member1 {
+  top: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+}
+
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -42508,64 +42822,12 @@ video {
   background-size: contain;
 }
 
+#app .container .preview-img .member {
+  width: 70px;
+}
+
 #app .container .preview-img .circle {
   margin: 0 auto;
-}
-
-#app .container .preview-img .member1 {
-  top: 20%;
-  left: 30%;
-}
-
-#app .container .preview-img .member2 {
-  top: 20%;
-  right: 30%;
-}
-
-#app .container .preview-img .member3 {
-  top: 40%;
-  left: 10%;
-}
-
-#app .container .preview-img .member4 {
-  top: 40%;
-  left: 30%;
-}
-
-#app .container .preview-img .member5 {
-  top: 40%;
-  right: 30%;
-}
-
-#app .container .preview-img .member6 {
-  top: 40%;
-  right: 10%;
-}
-
-#app .container .preview-img .member7 {
-  top: 60%;
-  left: 10%;
-}
-
-#app .container .preview-img .member8 {
-  top: 60%;
-  left: 30%;
-}
-
-#app .container .preview-img .member9 {
-  top: 60%;
-  right: 30%;
-}
-
-#app .container .preview-img .member10 {
-  top: 60%;
-  right: 10%;
-}
-
-#app .container .preview-img .member11 {
-  top: 80%;
-  left: 0;
-  right: 0;
 }
 
 @media (min-width: 640px){

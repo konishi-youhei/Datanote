@@ -8,6 +8,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
+/** Vuexの追記 */
+import store from './store/index'
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -21,6 +24,8 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('note-preview', require('./components/NotePreview').default);
+Vue.component('note-new', require('./components/NoteNew').default);
+Vue.component('body-component', require('./components/BodyComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -30,4 +35,5 @@ Vue.component('note-preview', require('./components/NotePreview').default);
 
 const app = new Vue({
     el: '#app',
+    store,
 });

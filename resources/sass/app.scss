@@ -1,3 +1,6 @@
+//インポート
+@import "formation";
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -78,53 +81,11 @@ $breakpoints: (
     background-image: url("/images/soccer-court.jpeg");
     background-size: contain;
 }
+#app .container .preview-img .member{
+    width: 70px;
+}
 #app .container .preview-img .circle{
     margin: 0 auto;
 }
-#app .container .preview-img {
-    .member1{
-        top:20%;
-        left:30%;
-    }
-    .member2{
-        top:20%;
-        right:30%;
-    }
-    .member3{
-        top:40%;
-        left:10%;
-    }
-    .member4{
-        top:40%;
-        left:30%;
-    }
-    .member5{
-        top:40%;
-        right:30%;
-    }
-    .member6{
-        top:40%;
-        right:10%;
-    }
-    .member7{
-        top:60%;
-        left:10%;
-    }
-    .member8{
-        top:60%;
-        left:30%;
-    }
-    .member9{
-        top:60%;
-        right:30%;
-    }
-    .member10{
-        top:60%;
-        right:10%;
-    }
-    .member11{
-        top:80%;
-        left:0;
-        right: 0;
-    }
-}
+
+
