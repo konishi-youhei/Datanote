@@ -1978,6 +1978,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     inputMember11: function inputMember11(val) {
       this.$store.commit('changeMember11', val.target.value);
+    },
+    ChangeSubMemberStatus: function ChangeSubMemberStatus() {
+      console.log('来てる');
+      this.$store.commit('changeSubMemberStatus');
     }
   },
   computed: {
@@ -2016,6 +2020,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     member11: function member11() {
       return this.$store.getters.getMember11;
+    },
+    subMemberStatus: function subMemberStatus() {
+      return this.$store.getters.getSubMemberStatus;
     }
   }
 });
@@ -37848,8 +37855,6 @@ var render = function() {
       _vm._v(" "),
       _vm._m(6),
       _vm._v(" "),
-      _vm._m(7),
-      _vm._v(" "),
       _c("div", { staticClass: "formation" }, [
         _c("div", { staticClass: "form-group py-2 px-3" }, [
           _c("label", { staticClass: "text-lg" }, [_vm._v("フォーメーション")]),
@@ -37881,7 +37886,7 @@ var render = function() {
           _c("label", { staticClass: "text-lg" }, [_vm._v("出場選手")]),
           _vm._v(" "),
           _c("table", { staticClass: "w-100 table table-bordered" }, [
-            _vm._m(8),
+            _vm._m(7),
             _vm._v(" "),
             _c("tr", [
               _c("td", [_vm._v("GK")]),
@@ -38023,20 +38028,36 @@ var render = function() {
           "div",
           {
             staticClass:
-              "border bg-light py-2 text-base text-center cursor-pointer position-relative"
+              "border bg-light py-2 text-base text-center cursor-pointer position-relative sub-member",
+            on: { click: _vm.ChangeSubMemberStatus }
           },
           [
             _vm._v("\n            サブメンバーも入力する\n            "),
-            _c("img", {
-              staticClass: "position-absolute right-3 top-1/3",
-              staticStyle: { width: "15px" },
-              attrs: { src: "/images/plusmark.svg", alt: "" }
-            })
+            _vm.subMemberStatus == true
+              ? _c("img", {
+                  staticClass: "position-absolute right-3 top-1/3",
+                  staticStyle: { width: "15px" },
+                  attrs: { src: "/images/plusmark.svg", alt: "" }
+                })
+              : _c("img", {
+                  staticClass: "position-absolute right-3 top-1/3",
+                  staticStyle: { width: "15px" },
+                  attrs: { src: "/images/minusmark.svg", alt: "" }
+                })
           ]
         ),
         _vm._v(" "),
-        _vm._m(9)
+        _c(
+          "div",
+          {
+            staticClass: "sub-list",
+            class: { subMemberStatus: _vm.subMemberStatus }
+          },
+          [_vm._m(8)]
+        )
       ]),
+      _vm._v(" "),
+      _vm._m(9),
       _vm._v(" "),
       _vm._m(10)
     ]
@@ -38180,21 +38201,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "comment" }, [
-      _c("div", { staticClass: "form-group py-2 px-3" }, [
-        _c("label", { staticClass: "text-lg" }, [_vm._v("コーチからの一言")]),
-        _vm._v(" "),
-        _c("textarea", {
-          staticClass: "form-control",
-          attrs: { name: "comment", cols: "20", rows: "10" }
-        })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("tr", [
       _c("th", { staticClass: "w-1/5" }, [_vm._v("ポジション")]),
       _vm._v(" "),
@@ -38205,84 +38211,97 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("table", { staticClass: "w-100 table table-bordered" }, [
-        _c("tr", [
-          _c("td", [_vm._v("GK")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "p-0 align-middle" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", name: "member12" }
-            })
-          ])
-        ]),
+    return _c("table", { staticClass: "w-100 table table-bordered" }, [
+      _c("tr", [
+        _c("td", [_vm._v("GK")]),
         _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("DF")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "p-0 align-middle" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", name: "member13" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("DF")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "p-0 align-middle" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", name: "member14" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("MF")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "p-0 align-middle" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", name: "member15" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("MF")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "p-0 align-middle" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", name: "member16" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("FW")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "p-0 align-middle" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", name: "member17" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("FW")]),
-          _vm._v(" "),
-          _c("td", { staticClass: "p-0 align-middle" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", name: "member18" }
-            })
-          ])
+        _c("td", { staticClass: "p-0 align-middle" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", name: "member12" }
+          })
         ])
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", [_vm._v("DF")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "p-0 align-middle" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", name: "member13" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", [_vm._v("DF")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "p-0 align-middle" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", name: "member14" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", [_vm._v("MF")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "p-0 align-middle" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", name: "member15" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", [_vm._v("MF")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "p-0 align-middle" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", name: "member16" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", [_vm._v("FW")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "p-0 align-middle" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", name: "member17" }
+          })
+        ])
+      ]),
+      _vm._v(" "),
+      _c("tr", [
+        _c("td", [_vm._v("FW")]),
+        _vm._v(" "),
+        _c("td", { staticClass: "p-0 align-middle" }, [
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", name: "member18" }
+          })
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "comment" }, [
+      _c("div", { staticClass: "form-group py-2 px-3" }, [
+        _c("label", { staticClass: "text-lg" }, [_vm._v("コーチからの一言")]),
+        _vm._v(" "),
+        _c("textarea", {
+          staticClass: "form-control",
+          attrs: { disabled: "", name: "comment", cols: "20", rows: "10" }
+        })
       ])
     ])
   },
@@ -38292,7 +38311,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "submit mb-28 flex items-center justify-between" },
+      { staticClass: "submit mt-10 mb-28 flex items-center justify-between" },
       [
         _c("div", { staticClass: "form-group py-2 px-3 w-3/6" }, [
           _c("input", {
@@ -52466,7 +52485,8 @@ var state = {
   member8: '',
   member9: '',
   member10: '',
-  member11: ''
+  member11: '',
+  subMemberStatus: false
 };
 var getters = {
   getSelect: function getSelect(state) {
@@ -52504,6 +52524,9 @@ var getters = {
   },
   getMember11: function getMember11(state) {
     return state.member11;
+  },
+  getSubMemberStatus: function getSubMemberStatus(state) {
+    return state.subMemberStatus;
   }
 };
 var mutations = {
@@ -52542,6 +52565,9 @@ var mutations = {
   },
   changeMember11: function changeMember11(state, val) {
     state.member11 = val;
+  },
+  changeSubMemberStatus: function changeSubMemberStatus(state) {
+    state.subMemberStatus = !state.subMemberStatus;
   }
 };
 var actions = {};

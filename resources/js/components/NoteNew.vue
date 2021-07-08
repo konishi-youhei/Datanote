@@ -36,6 +36,10 @@ export default {
         },
         inputMember11(val) {
             this.$store.commit('changeMember11', val.target.value);
+        },
+        ChangeSubMemberStatus() {
+            console.log('来てる');
+            this.$store.commit('changeSubMemberStatus');
         }
     },
     computed: {
@@ -75,6 +79,9 @@ export default {
         member11: function() {
             return this.$store.getters.getMember11
         },
+        subMemberStatus: function() {
+            return this.$store.getters.getSubMemberStatus
+        }
     },
 }
 </script>
@@ -137,14 +144,6 @@ export default {
             <div class="form-group py-2 px-3">
                 <label class="text-lg">試合について</label>
                 <textarea name="impressions" cols="20" rows="10" class="form-control"></textarea>
-            </div>
-        </div>
-
-        <!-- 試合について -->
-        <div class="comment">
-            <div class="form-group py-2 px-3">
-                <label class="text-lg">コーチからの一言</label>
-                <textarea name="comment" cols="20" rows="10" class="form-control"></textarea>
             </div>
         </div>
 
@@ -221,11 +220,12 @@ export default {
 
         <!-- サブメンバー -->
         <div class="py-2 px-3">
-            <div class="border bg-light py-2 text-base text-center cursor-pointer position-relative">
+            <div class="border bg-light py-2 text-base text-center cursor-pointer position-relative sub-member" @click="ChangeSubMemberStatus">
                 サブメンバーも入力する
-                <img :src="'/images/plusmark.svg'" alt="" style="width: 15px;" class="position-absolute right-3 top-1/3">
+                <img v-if="subMemberStatus == true" :src="'/images/plusmark.svg'" alt="" style="width: 15px;" class="position-absolute right-3 top-1/3">
+                <img v-else :src="'/images/minusmark.svg'" alt="" style="width: 15px;" class="position-absolute right-3 top-1/3">
             </div>
-            <div>
+            <div class="sub-list" v-bind:class="{ subMemberStatus: subMemberStatus }">
                 <table class="w-100 table table-bordered">
                     <tr>
                         <td>GK</td>
@@ -258,8 +258,17 @@ export default {
                 </table>
             </div>
         </div>
+
+        <!-- 試合について -->
+        <div class="comment">
+            <div class="form-group py-2 px-3">
+                <label class="text-lg">コーチからの一言</label>
+                <textarea disabled name="comment" cols="20" rows="10" class="form-control"></textarea>
+            </div>
+        </div>
+
         <!-- 送信ボタン -->
-        <div class="submit mb-28 flex items-center justify-between">
+        <div class="submit mt-10 mb-28 flex items-center justify-between">
             <div class="form-group py-2 px-3 w-3/6">
                 <input type="submit" name="save" value="保存する" class="form-control btn btn-primary">
             </div>

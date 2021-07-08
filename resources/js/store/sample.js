@@ -11,6 +11,7 @@ const state = {
     member9: '',
     member10: '',
     member11: '',
+    subMemberStatus: false,
 }
 
 const getters = {
@@ -49,6 +50,9 @@ const getters = {
     },
     getMember11: function(state) {
         return state.member11
+    },
+    getSubMemberStatus: function(state) {
+        return state.subMemberStatus
     }
 }
 
@@ -89,6 +93,9 @@ const mutations = {
     changeMember11(state, val) {
         state.member11 = val;
     },
+    changeSubMemberStatus(state) {
+        state.subMemberStatus = !state.subMemberStatus;
+    }
 }
 
 const actions = {
