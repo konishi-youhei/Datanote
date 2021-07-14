@@ -53,7 +53,7 @@ const getters = {
     },
     getSubMemberStatus: function(state) {
         return state.subMemberStatus
-    }
+    },
 }
 
 const mutations = {
@@ -95,7 +95,7 @@ const mutations = {
     },
     changeSubMemberStatus(state) {
         state.subMemberStatus = !state.subMemberStatus;
-    }
+    },
 }
 
 const actions = {

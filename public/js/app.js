@@ -2024,6 +2024,30 @@ __webpack_require__.r(__webpack_exports__);
     subMemberStatus: function subMemberStatus() {
       return this.$store.getters.getSubMemberStatus;
     }
+  },
+  props: {
+    csrf: {
+      type: String,
+      required: true
+    },
+    errors: {
+      type: Array,
+      required: true
+    }
+  },
+  data: function data() {
+    return {
+      error: {
+        date: this.errors.date,
+        place: this.errors.place,
+        opponent: this.errors.opponent,
+        match_result_home: this.errors.match_result_home,
+        match_result_away: this.errors.match_result_away,
+        url: this.errors.url,
+        impressions: this.errors.impressions,
+        comment: this.errors.comment
+      }
+    };
   }
 });
 
@@ -37727,54 +37751,6 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/BodyComponent.vue?vue&type=template&id=10cf9fa0&":
-/*!****************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/BodyComponent.vue?vue&type=template&id=10cf9fa0& ***!
-  \****************************************************************************************************************************************************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "container row h-full w-screen" },
-    [
-      _c("sidebar", { staticClass: "sidebar col-lg-2 h-full" }, [
-        _c("ul", { staticClass: "text-xl" }, [
-          _c("li", [
-            _c("a", { attrs: { href: "" } }, [_vm._v("サッカーノート作成")])
-          ]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { attrs: { href: "" } }, [_vm._v("サッカーノート一覧")])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "flex col-lg-10 create-area" },
-        [_c("note-new"), _vm._v(" "), _c("note-preview")],
-        1
-      )
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
-
-
-/***/ }),
-
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -37843,223 +37819,400 @@ var render = function() {
     [
       _vm._m(0),
       _vm._v(" "),
-      _vm._m(1),
-      _vm._v(" "),
-      _vm._m(2),
-      _vm._v(" "),
-      _vm._m(3),
-      _vm._v(" "),
-      _vm._m(4),
-      _vm._v(" "),
-      _vm._m(5),
-      _vm._v(" "),
-      _vm._m(6),
-      _vm._v(" "),
-      _c("div", { staticClass: "formation" }, [
-        _c("div", { staticClass: "form-group py-2 px-3" }, [
-          _c("label", { staticClass: "text-lg" }, [_vm._v("フォーメーション")]),
+      _c(
+        "form",
+        { attrs: { action: "/notes/create", method: "POST", name: "newNote" } },
+        [
+          _c("input", {
+            attrs: { type: "hidden", name: "_token" },
+            domProps: { value: _vm.csrf }
+          }),
           _vm._v(" "),
-          _c(
-            "select",
-            {
-              staticClass: "form-control",
-              attrs: { name: "formation", id: "" },
-              on: { change: _vm.onChange }
-            },
-            [
-              _c("option", { attrs: { value: "one" } }, [_vm._v("4-4-2")]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "two" } }, [_vm._v("4-2-3-1")]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "three" } }, [_vm._v("4-1-4-1")]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "four" } }, [_vm._v("4-1-2-3")]),
-              _vm._v(" "),
-              _c("option", { attrs: { value: "five" } }, [_vm._v("4-2-1-3")])
-            ]
-          )
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "member" }, [
-        _c("div", { staticClass: "form-group py-2 px-3" }, [
-          _c("label", { staticClass: "text-lg" }, [_vm._v("出場選手")]),
+          _c("div", { staticClass: "date" }, [
+            _c(
+              "div",
+              { staticClass: "form-group py-2 px-3" },
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _vm._l(_vm.error.date, function(value) {
+                  return _c("strong", { staticClass: "error text-red-600" }, [
+                    _vm._v(_vm._s(value))
+                  ])
+                }),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "date", name: "date" }
+                })
+              ],
+              2
+            )
+          ]),
           _vm._v(" "),
-          _c("table", { staticClass: "w-100 table table-bordered" }, [
-            _vm._m(7),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("GK")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
+          _c("div", { staticClass: "place" }, [
+            _c(
+              "div",
+              { staticClass: "form-group py-2 px-3" },
+              [
+                _vm._m(2),
+                _vm._v(" "),
+                _vm._l(_vm.error.place, function(value) {
+                  return _c("strong", { staticClass: "error" }, [
+                    _vm._v(_vm._s(value))
+                  ])
+                }),
+                _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control",
-                  attrs: { type: "text", name: "member1" },
-                  on: { input: _vm.inputMember1 }
+                  attrs: { type: "text", name: "place" }
                 })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("DF")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "opponent" }, [
+            _c(
+              "div",
+              { staticClass: "form-group py-2 px-3" },
+              [
+                _c("label", { staticClass: "text-lg" }, [_vm._v("対戦相手")]),
+                _vm._v(" "),
+                _vm._l(_vm.error.opponent, function(value) {
+                  return _c("strong", { staticClass: "error" }, [
+                    _vm._v(_vm._s(value))
+                  ])
+                }),
+                _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control",
-                  attrs: { type: "text", name: "member2" },
-                  on: { input: _vm.inputMember2 }
+                  attrs: { type: "text", name: "opponent" }
                 })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("DF")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "result" }, [
+            _c(
+              "div",
+              { staticClass: "form-group py-2 px-3" },
+              [
+                _c("label", { staticClass: "text-lg" }, [_vm._v("試合結果")]),
+                _vm._v(" "),
+                _vm._l(_vm.error.match_result_home, function(value) {
+                  return _c("strong", { staticClass: "error" }, [
+                    _vm._v(_vm._s(value))
+                  ])
+                }),
+                _vm._v(" "),
+                _vm._l(_vm.error.match_result_away, function(value) {
+                  return _c("strong", { staticClass: "error" }, [
+                    _vm._v(_vm._s(value))
+                  ])
+                }),
+                _vm._v(" "),
+                _vm._m(3)
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "url" }, [
+            _c(
+              "div",
+              { staticClass: "form-group py-2 px-3" },
+              [
+                _c("label", { staticClass: "text-lg" }, [
+                  _vm._v("試合動画URL")
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.error.url, function(value) {
+                  return _c("strong", { staticClass: "error" }, [
+                    _vm._v(_vm._s(value))
+                  ])
+                }),
+                _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control",
-                  attrs: { type: "text", name: "member3" },
-                  on: { input: _vm.inputMember3 }
+                  attrs: { type: "url", name: "url" }
                 })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("DF")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
-                _c("input", {
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "impressions" }, [
+            _c(
+              "div",
+              { staticClass: "form-group py-2 px-3" },
+              [
+                _c("label", { staticClass: "text-lg" }, [
+                  _vm._v("試合について")
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.error.impressions, function(value) {
+                  return _c("strong", { staticClass: "error" }, [
+                    _vm._v(_vm._s(value))
+                  ])
+                }),
+                _vm._v(" "),
+                _c("textarea", {
                   staticClass: "form-control",
-                  attrs: { type: "text", name: "member4" },
-                  on: { input: _vm.inputMember4 }
+                  attrs: { name: "impressions", cols: "20", rows: "10" }
                 })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("DF")]),
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "formation" }, [
+            _c("div", { staticClass: "form-group py-2 px-3" }, [
+              _c("label", { staticClass: "text-lg" }, [
+                _vm._v("フォーメーション")
+              ]),
               _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
-                _c("input", {
+              _c(
+                "select",
+                {
                   staticClass: "form-control",
-                  attrs: { type: "text", name: "member5" },
-                  on: { input: _vm.inputMember5 }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("MF")]),
+                  attrs: { name: "formation", id: "" },
+                  on: { change: _vm.onChange }
+                },
+                [
+                  _c("option", { attrs: { value: "one" } }, [_vm._v("4-4-2")]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "two" } }, [
+                    _vm._v("4-2-3-1")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "three" } }, [
+                    _vm._v("4-1-4-1")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "four" } }, [
+                    _vm._v("4-1-2-3")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "five" } }, [
+                    _vm._v("4-2-1-3")
+                  ])
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "member" }, [
+            _c("div", { staticClass: "form-group py-2 px-3" }, [
+              _c("label", { staticClass: "text-lg" }, [_vm._v("出場選手")]),
               _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", name: "member6" },
-                  on: { input: _vm.inputMember6 }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("MF")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", name: "member7" },
-                  on: { input: _vm.inputMember7 }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("MF")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", name: "member8" },
-                  on: { input: _vm.inputMember8 }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("MF")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", name: "member9" },
-                  on: { input: _vm.inputMember9 }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("FW")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", name: "member10" },
-                  on: { input: _vm.inputMember10 }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("FW")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "p-0 align-middle" }, [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", name: "member11" },
-                  on: { input: _vm.inputMember11 }
-                })
+              _c("table", { staticClass: "w-100 table table-bordered" }, [
+                _vm._m(4),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("GK")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member1" },
+                      on: { input: _vm.inputMember1 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("DF")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member2" },
+                      on: { input: _vm.inputMember2 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("DF")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member3" },
+                      on: { input: _vm.inputMember3 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("DF")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member4" },
+                      on: { input: _vm.inputMember4 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("DF")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member5" },
+                      on: { input: _vm.inputMember5 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("MF")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member6" },
+                      on: { input: _vm.inputMember6 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("MF")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member7" },
+                      on: { input: _vm.inputMember7 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("MF")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member8" },
+                      on: { input: _vm.inputMember8 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("MF")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member9" },
+                      on: { input: _vm.inputMember9 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("FW")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member10" },
+                      on: { input: _vm.inputMember10 }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("td", [_vm._v("FW")]),
+                  _vm._v(" "),
+                  _c("td", { staticClass: "p-0 align-middle" }, [
+                    _c("input", {
+                      staticClass: "form-control",
+                      attrs: { type: "text", name: "member11" },
+                      on: { input: _vm.inputMember11 }
+                    })
+                  ])
+                ])
               ])
             ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "py-2 px-3" }, [
-        _c(
-          "div",
-          {
-            staticClass:
-              "border bg-light py-2 text-base text-center cursor-pointer position-relative sub-member",
-            on: { click: _vm.ChangeSubMemberStatus }
-          },
-          [
-            _vm._v("\n            サブメンバーも入力する\n            "),
-            _vm.subMemberStatus == true
-              ? _c("img", {
-                  staticClass: "position-absolute right-3 top-1/3",
-                  staticStyle: { width: "15px" },
-                  attrs: { src: "/images/plusmark.svg", alt: "" }
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "py-2 px-3" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "border bg-light py-2 text-base text-center cursor-pointer position-relative sub-member",
+                on: { click: _vm.ChangeSubMemberStatus }
+              },
+              [
+                _vm._v(
+                  "\n                サブメンバーも入力する\n                "
+                ),
+                _vm.subMemberStatus == true
+                  ? _c("img", {
+                      staticClass: "position-absolute right-3 top-1/3",
+                      staticStyle: { width: "15px" },
+                      attrs: { src: "/images/plusmark.svg", alt: "" }
+                    })
+                  : _c("img", {
+                      staticClass: "position-absolute right-3 top-1/3",
+                      staticStyle: { width: "15px" },
+                      attrs: { src: "/images/minusmark.svg", alt: "" }
+                    })
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass: "sub-list",
+                class: { subMemberStatus: _vm.subMemberStatus }
+              },
+              [_vm._m(5)]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "comment" }, [
+            _c(
+              "div",
+              { staticClass: "form-group py-2 px-3" },
+              [
+                _c("label", { staticClass: "text-lg" }, [
+                  _vm._v("コーチからの一言")
+                ]),
+                _vm._v(" "),
+                _vm._l(_vm.error.comment, function(value) {
+                  return _c("strong", { staticClass: "error" }, [
+                    _vm._v(_vm._s(value))
+                  ])
+                }),
+                _vm._v(" "),
+                _c("textarea", {
+                  staticClass: "form-control",
+                  attrs: {
+                    disabled: "",
+                    name: "comment",
+                    cols: "20",
+                    rows: "10"
+                  }
                 })
-              : _c("img", {
-                  staticClass: "position-absolute right-3 top-1/3",
-                  staticStyle: { width: "15px" },
-                  attrs: { src: "/images/minusmark.svg", alt: "" }
-                })
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "sub-list",
-            class: { subMemberStatus: _vm.subMemberStatus }
-          },
-          [_vm._m(8)]
-        )
-      ]),
-      _vm._v(" "),
-      _vm._m(9),
-      _vm._v(" "),
-      _vm._m(10)
+              ],
+              2
+            )
+          ]),
+          _vm._v(" "),
+          _vm._m(6)
+        ]
+      )
     ]
   )
 }
@@ -38080,121 +38233,50 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "date" }, [
-      _c("div", { staticClass: "form-group py-2 px-3" }, [
-        _c("label", { staticClass: "text-lg" }, [
-          _vm._v("日付"),
-          _c(
-            "span",
-            {
-              staticClass:
-                "text-white text-sm px-3 py-1 bg-red-600 ml-3 rounded-sm"
-            },
-            [_vm._v("必須")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "date", name: "date" }
-        })
-      ])
+    return _c("label", { staticClass: "text-lg" }, [
+      _vm._v("日付"),
+      _c(
+        "span",
+        {
+          staticClass: "text-white text-sm px-3 py-1 bg-red-600 ml-3 rounded-sm"
+        },
+        [_vm._v("必須")]
+      )
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "place" }, [
-      _c("div", { staticClass: "form-group py-2 px-3" }, [
-        _c("label", { staticClass: "text-lg" }, [
-          _vm._v("場所"),
-          _c(
-            "span",
-            {
-              staticClass:
-                "text-white text-sm px-3 py-1 bg-red-600 ml-3 rounded-sm"
-            },
-            [_vm._v("必須")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "text", name: "place" }
-        })
-      ])
+    return _c("label", { staticClass: "text-lg" }, [
+      _vm._v("場所"),
+      _c(
+        "span",
+        {
+          staticClass: "text-white text-sm px-3 py-1 bg-red-600 ml-3 rounded-sm"
+        },
+        [_vm._v("必須")]
+      )
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "opponent" }, [
-      _c("div", { staticClass: "form-group py-2 px-3" }, [
-        _c("label", { staticClass: "text-lg" }, [_vm._v("対戦相手")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "text", name: "opponent" }
-        })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "result" }, [
-      _c("div", { staticClass: "form-group py-2 px-3" }, [
-        _c("label", { staticClass: "text-lg" }, [_vm._v("試合結果")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "flex text-center" }, [
-          _c("input", {
-            staticClass: "form-control w-1/5",
-            attrs: { type: "number", name: "match-result-home" }
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "w-1/5 text-xl leading-loose" }, [
-            _vm._v("VS")
-          ]),
-          _vm._v(" "),
-          _c("input", {
-            staticClass: "form-control w-1/5",
-            attrs: { type: "number", name: "match-result-away" }
-          })
-        ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "url" }, [
-      _c("div", { staticClass: "form-group py-2 px-3" }, [
-        _c("label", { staticClass: "text-lg" }, [_vm._v("試合動画URL")]),
-        _vm._v(" "),
-        _c("input", {
-          staticClass: "form-control",
-          attrs: { type: "url", name: "url" }
-        })
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "impressions" }, [
-      _c("div", { staticClass: "form-group py-2 px-3" }, [
-        _c("label", { staticClass: "text-lg" }, [_vm._v("試合について")]),
-        _vm._v(" "),
-        _c("textarea", {
-          staticClass: "form-control",
-          attrs: { name: "impressions", cols: "20", rows: "10" }
-        })
-      ])
+    return _c("div", { staticClass: "flex text-center" }, [
+      _c("input", {
+        staticClass: "form-control w-1/5",
+        attrs: { type: "number", name: "match_result_home" }
+      }),
+      _vm._v(" "),
+      _c("span", { staticClass: "w-1/5 text-xl leading-loose" }, [
+        _vm._v("VS")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control w-1/5",
+        attrs: { type: "number", name: "match_result_away" }
+      })
     ])
   },
   function() {
@@ -38287,21 +38369,6 @@ var staticRenderFns = [
             attrs: { type: "text", name: "member18" }
           })
         ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "comment" }, [
-      _c("div", { staticClass: "form-group py-2 px-3" }, [
-        _c("label", { staticClass: "text-lg" }, [_vm._v("コーチからの一言")]),
-        _vm._v(" "),
-        _c("textarea", {
-          staticClass: "form-control",
-          attrs: { disabled: "", name: "comment", cols: "20", rows: "10" }
-        })
       ])
     ])
   },
@@ -38604,6 +38671,47 @@ var render = function() {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SidebarComponent.vue?vue&type=template&id=54833a28&":
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/SidebarComponent.vue?vue&type=template&id=54833a28& ***!
+  \*******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "sidebar col-lg-2 h-full" }, [
+      _c("ul", { staticClass: "text-xl" }, [
+        _c("li", [
+          _c("a", { attrs: { href: "" } }, [_vm._v("サッカーノート作成")])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("a", { attrs: { href: "" } }, [_vm._v("サッカーノート一覧")])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -52120,7 +52228,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('note-preview', __webpack_require__(/*! ./components/NotePreview */ "./resources/js/components/NotePreview.vue")["default"]);
 Vue.component('note-new', __webpack_require__(/*! ./components/NoteNew */ "./resources/js/components/NoteNew.vue")["default"]);
-Vue.component('body-component', __webpack_require__(/*! ./components/BodyComponent */ "./resources/js/components/BodyComponent.vue")["default"]);
+Vue.component('side-bar', __webpack_require__(/*! ./components/SidebarComponent */ "./resources/js/components/SidebarComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -52176,59 +52284,6 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
-
-/***/ }),
-
-/***/ "./resources/js/components/BodyComponent.vue":
-/*!***************************************************!*\
-  !*** ./resources/js/components/BodyComponent.vue ***!
-  \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _BodyComponent_vue_vue_type_template_id_10cf9fa0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BodyComponent.vue?vue&type=template&id=10cf9fa0& */ "./resources/js/components/BodyComponent.vue?vue&type=template&id=10cf9fa0&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
-
-var script = {}
-
-
-/* normalize component */
-
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
-  _BodyComponent_vue_vue_type_template_id_10cf9fa0___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _BodyComponent_vue_vue_type_template_id_10cf9fa0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
-  false,
-  null,
-  null,
-  null
-  
-)
-
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "resources/js/components/BodyComponent.vue"
-/* harmony default export */ __webpack_exports__["default"] = (component.exports);
-
-/***/ }),
-
-/***/ "./resources/js/components/BodyComponent.vue?vue&type=template&id=10cf9fa0&":
-/*!**********************************************************************************!*\
-  !*** ./resources/js/components/BodyComponent.vue?vue&type=template&id=10cf9fa0& ***!
-  \**********************************************************************************/
-/*! exports provided: render, staticRenderFns */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BodyComponent_vue_vue_type_template_id_10cf9fa0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./BodyComponent.vue?vue&type=template&id=10cf9fa0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/BodyComponent.vue?vue&type=template&id=10cf9fa0&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BodyComponent_vue_vue_type_template_id_10cf9fa0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_BodyComponent_vue_vue_type_template_id_10cf9fa0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
-
-
 
 /***/ }),
 
@@ -52434,6 +52489,59 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotePreview_vue_vue_type_template_id_ae14b14a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotePreview_vue_vue_type_template_id_ae14b14a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/SidebarComponent.vue":
+/*!******************************************************!*\
+  !*** ./resources/js/components/SidebarComponent.vue ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _SidebarComponent_vue_vue_type_template_id_54833a28___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SidebarComponent.vue?vue&type=template&id=54833a28& */ "./resources/js/components/SidebarComponent.vue?vue&type=template&id=54833a28&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _SidebarComponent_vue_vue_type_template_id_54833a28___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _SidebarComponent_vue_vue_type_template_id_54833a28___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/SidebarComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/SidebarComponent.vue?vue&type=template&id=54833a28&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/SidebarComponent.vue?vue&type=template&id=54833a28& ***!
+  \*************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SidebarComponent_vue_vue_type_template_id_54833a28___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./SidebarComponent.vue?vue&type=template&id=54833a28& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/SidebarComponent.vue?vue&type=template&id=54833a28&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SidebarComponent_vue_vue_type_template_id_54833a28___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_SidebarComponent_vue_vue_type_template_id_54833a28___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

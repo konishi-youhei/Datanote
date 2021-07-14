@@ -25,7 +25,7 @@ import store from './store/index'
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('note-preview', require('./components/NotePreview').default);
 Vue.component('note-new', require('./components/NoteNew').default);
-Vue.component('body-component', require('./components/BodyComponent').default);
+Vue.component('side-bar', require('./components/SidebarComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

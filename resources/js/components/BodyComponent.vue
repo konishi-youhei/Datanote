@@ -1,18 +1,27 @@
-<template>
-    <div class="container row h-full w-screen">
-        <!-- Sidebar -->
-        <sidebar class="sidebar col-lg-2 h-full">
-            <ul class="text-xl">
-                <li><a href="">サッカーノート作成</a></li>
-                <li><a href="">サッカーノート一覧</a></li>
-            </ul>
-        </sidebar>
+<!--<template>-->
+<!--    <div class="container row h-full w-screen">-->
+<!--        &lt;!&ndash; Sidebar &ndash;&gt;-->
+<!--        <side-bar></side-bar>-->
 
-        <div class="flex col-lg-10 create-area">
-            <!-- 入力エリア -->
-            <note-new></note-new>
-            <!-- プレビューエリア -->
-            <note-preview></note-preview>
-        </div>
-    </div>
-</template>
+<!--        <div class="flex col-lg-10 create-area">-->
+<!--            &lt;!&ndash; 入力エリア &ndash;&gt;-->
+<!--            <note-new :csrf="csrf"></note-new>-->
+<!--            &lt;!&ndash; プレビューエリア &ndash;&gt;-->
+<!--            <note-preview></note-preview>-->
+<!--        </div>-->
+
+<!--        <form>-->
+<!--            <input type="hidden" name="_token" v-bind:value="csrf">-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</template>-->
+<!--<script>-->
+<!--export default {-->
+<!--    props:  {-->
+<!--        csrf: {-->
+<!--            type: String,-->
+<!--            required: true,-->
+<!--        }-->
+<!--    },-->
+<!--}-->
+<!--</script>-->

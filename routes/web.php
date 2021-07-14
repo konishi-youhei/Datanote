@@ -17,8 +17,6 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/new', 'HomeController@index')->name('new');
-
 // 'middleware'=>'auth:admin'を追加
 Route::group(['prefix' => 'admin', 'middleware'=>'auth:admin'], function(){
 
@@ -27,9 +25,13 @@ Route::group(['prefix' => 'admin', 'middleware'=>'auth:admin'], function(){
 
 });
 
-//ログインやログアウト後のページに関しては、非ログイン時にアクセスするので'middleware'=>'auth:admin'の外に記述する
+// ログインやログアウト後のページに関しては、非ログイン時にアクセスするので'middleware'=>'auth:admin'の外に記述する
 Route::get('admin/login', 'Admin\LoginController@showLoginForm')->name('admin.login');
 Route::post('admin/login', 'Admin\LoginController@login')->name('admin.login');
 Route::post('admin/logout', 'Admin\LoginController@logout')->name('admin.logout');
 Route::get('admin/register', 'Admin\RegisterController@showRegisterForm')->name('admin.register');
 Route::post('admin/register', 'Admin\RegisterController@register')->name('admin.register');
+
+// ノートについてのルーティングを記述
+Route::get('/notes/new', 'Note\NoteController@new')->name('note.new');
+Route::post('/notes/create', 'Note\NoteController@create')->name('note.create');
