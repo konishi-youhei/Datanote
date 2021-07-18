@@ -1932,6 +1932,188 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NoteEdit.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NoteEdit.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    this.$nextTick(function () {
+      this.$store.commit('changeFormation', this.note.formation);
+      this.$store.commit('changeMember1', this.member.member1);
+      this.$store.commit('changeMember2', this.member.member2);
+      this.$store.commit('changeMember3', this.member.member3);
+      this.$store.commit('changeMember4', this.member.member4);
+      this.$store.commit('changeMember5', this.member.member5);
+      this.$store.commit('changeMember6', this.member.member6);
+      this.$store.commit('changeMember7', this.member.member7);
+      this.$store.commit('changeMember8', this.member.member8);
+      this.$store.commit('changeMember9', this.member.member9);
+      this.$store.commit('changeMember10', this.member.member10);
+      this.$store.commit('changeMember11', this.member.member11);
+      this.$store.commit('changeMember12', this.member.member12);
+      this.$store.commit('changeMember13', this.member.member13);
+      this.$store.commit('changeMember14', this.member.member14);
+      this.$store.commit('changeMember15', this.member.member15);
+      this.$store.commit('changeMember16', this.member.member16);
+      this.$store.commit('changeMember17', this.member.member17);
+      this.$store.commit('changeMember18', this.member.member18);
+    });
+  },
+  methods: {
+    onChange: function onChange(val) {
+      this.$store.commit('changeFormation', val.target.value);
+    },
+    inputMember1: function inputMember1(val) {
+      this.$store.commit('changeMember1', val.target.value);
+    },
+    inputMember2: function inputMember2(val) {
+      this.$store.commit('changeMember2', val.target.value);
+    },
+    inputMember3: function inputMember3(val) {
+      this.$store.commit('changeMember3', val.target.value);
+    },
+    inputMember4: function inputMember4(val) {
+      this.$store.commit('changeMember4', val.target.value);
+    },
+    inputMember5: function inputMember5(val) {
+      this.$store.commit('changeMember5', val.target.value);
+    },
+    inputMember6: function inputMember6(val) {
+      this.$store.commit('changeMember6', val.target.value);
+    },
+    inputMember7: function inputMember7(val) {
+      this.$store.commit('changeMember7', val.target.value);
+    },
+    inputMember8: function inputMember8(val) {
+      this.$store.commit('changeMember8', val.target.value);
+    },
+    inputMember9: function inputMember9(val) {
+      this.$store.commit('changeMember9', val.target.value);
+    },
+    inputMember10: function inputMember10(val) {
+      this.$store.commit('changeMember10', val.target.value);
+    },
+    inputMember11: function inputMember11(val) {
+      this.$store.commit('changeMember11', val.target.value);
+    },
+    ChangeSubMemberStatus: function ChangeSubMemberStatus() {
+      console.log('来てる');
+      this.$store.commit('changeSubMemberStatus');
+    }
+  },
+  computed: {
+    select: function select() {
+      return this.$store.getters.getSelect;
+    },
+    member1: function member1() {
+      return this.$store.getters.getMember1;
+    },
+    member2: function member2() {
+      return this.$store.getters.getMember2;
+    },
+    member3: function member3() {
+      return this.$store.getters.getMember3;
+    },
+    member4: function member4() {
+      return this.$store.getters.getMember4;
+    },
+    member5: function member5() {
+      return this.$store.getters.getMember5;
+    },
+    member6: function member6() {
+      return this.$store.getters.getMember7;
+    },
+    member7: function member7() {
+      return this.$store.getters.getMember7;
+    },
+    member8: function member8() {
+      return this.$store.getters.getMember8;
+    },
+    member9: function member9() {
+      return this.$store.getters.getMember9;
+    },
+    member10: function member10() {
+      return this.$store.getters.getMember10;
+    },
+    member11: function member11() {
+      return this.$store.getters.getMember11;
+    },
+    subMemberStatus: function subMemberStatus() {
+      return this.$store.getters.getSubMemberStatus;
+    }
+  },
+  props: {
+    csrf: {
+      type: String,
+      required: true
+    },
+    errors: {
+      type: Array,
+      required: true
+    },
+    notes: {
+      type: Object
+    },
+    members: {
+      type: Object
+    }
+  },
+  data: function data() {
+    return {
+      error: {
+        date: this.errors.date,
+        place: this.errors.place,
+        opponent: this.errors.opponent,
+        match_result_home: this.errors.match_result_home,
+        match_result_away: this.errors.match_result_away,
+        url: this.errors.url,
+        impressions: this.errors.impressions,
+        comment: this.errors.comment,
+        formation: this.errors.formation
+      },
+      note: {
+        date: this.notes.date,
+        place: this.notes.place,
+        opponent: this.notes.opponent,
+        match_result_home: this.notes.match_result_home,
+        match_result_away: this.notes.match_result_away,
+        url: this.notes.url,
+        impressions: this.notes.impressions,
+        comment: this.notes.comment,
+        formation: this.notes.formation
+      },
+      member: {
+        member1: this.members.member1,
+        member2: this.members.member2,
+        member3: this.members.member3,
+        member4: this.members.member4,
+        member5: this.members.member5,
+        member6: this.members.member6,
+        member7: this.members.member7,
+        member8: this.members.member8,
+        member9: this.members.member9,
+        member10: this.members.member10,
+        member11: this.members.member11,
+        member12: this.members.member12,
+        member13: this.members.member13,
+        member14: this.members.member14,
+        member15: this.members.member15,
+        member16: this.members.member16,
+        member17: this.members.member17,
+        member18: this.members.member18
+      }
+    };
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NoteNew.vue?vue&type=script&lang=js&":
 /*!******************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NoteNew.vue?vue&type=script&lang=js& ***!
@@ -2045,7 +2227,8 @@ __webpack_require__.r(__webpack_exports__);
         match_result_away: this.errors.match_result_away,
         url: this.errors.url,
         impressions: this.errors.impressions,
-        comment: this.errors.comment
+        comment: this.errors.comment,
+        formation: this.errors.formation
       }
     };
   }
@@ -37798,6 +37981,614 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NoteEdit.vue?vue&type=template&id=e9671ef2&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NoteEdit.vue?vue&type=template&id=e9671ef2& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("input", {
+      attrs: { type: "hidden", name: "_token" },
+      domProps: { value: _vm.csrf }
+    }),
+    _vm._v(" "),
+    _c("div", { staticClass: "date" }, [
+      _c(
+        "div",
+        { staticClass: "form-group py-2 px-3" },
+        [
+          _vm._m(0),
+          _vm._v(" "),
+          _vm._l(_vm.error.date, function(value) {
+            return _c("strong", { staticClass: "error text-red-600" }, [
+              _vm._v(_vm._s(value))
+            ])
+          }),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "date", name: "date" },
+            domProps: { value: _vm.note.date }
+          })
+        ],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "place" }, [
+      _c(
+        "div",
+        { staticClass: "form-group py-2 px-3" },
+        [
+          _vm._m(1),
+          _vm._v(" "),
+          _vm._l(_vm.error.place, function(value) {
+            return _c("strong", { staticClass: "error text-red-600" }, [
+              _vm._v(_vm._s(value))
+            ])
+          }),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", name: "place" },
+            domProps: { value: _vm.note.place }
+          })
+        ],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "opponent" }, [
+      _c(
+        "div",
+        { staticClass: "form-group py-2 px-3" },
+        [
+          _c("label", { staticClass: "text-lg" }, [_vm._v("対戦相手")]),
+          _vm._v(" "),
+          _vm._l(_vm.error.opponent, function(value) {
+            return _c("strong", { staticClass: "error text-red-600" }, [
+              _vm._v(_vm._s(value))
+            ])
+          }),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "text", name: "opponent" },
+            domProps: { value: _vm.note.opponent }
+          })
+        ],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "result" }, [
+      _c(
+        "div",
+        { staticClass: "form-group py-2 px-3" },
+        [
+          _c("label", { staticClass: "text-lg" }, [_vm._v("試合結果")]),
+          _vm._v(" "),
+          _vm._l(_vm.error.match_result_home, function(value) {
+            return _c("strong", { staticClass: "error text-red-600" }, [
+              _vm._v(_vm._s(value))
+            ])
+          }),
+          _vm._v(" "),
+          _vm._l(_vm.error.match_result_away, function(value) {
+            return _c("strong", { staticClass: "error text-red-600" }, [
+              _vm._v(_vm._s(value))
+            ])
+          }),
+          _vm._v(" "),
+          _c("div", { staticClass: "flex text-center" }, [
+            _c("input", {
+              staticClass: "form-control w-1/5",
+              attrs: { type: "number", min: "0", name: "match_result_home" },
+              domProps: { value: _vm.note.match_result_home }
+            }),
+            _vm._v(" "),
+            _c("span", { staticClass: "w-1/5 text-xl leading-loose" }, [
+              _vm._v("VS")
+            ]),
+            _vm._v(" "),
+            _c("input", {
+              staticClass: "form-control w-1/5",
+              attrs: { type: "number", min: "0", name: "match_result_away" },
+              domProps: { value: _vm.note.match_result_away }
+            })
+          ])
+        ],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "url" }, [
+      _c(
+        "div",
+        { staticClass: "form-group py-2 px-3" },
+        [
+          _c("label", { staticClass: "text-lg" }, [_vm._v("試合動画URL")]),
+          _vm._v(" "),
+          _vm._l(_vm.error.url, function(value) {
+            return _c("strong", { staticClass: "error text-red-600" }, [
+              _vm._v(_vm._s(value))
+            ])
+          }),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "form-control",
+            attrs: { type: "url", name: "url" },
+            domProps: { value: _vm.note.url }
+          })
+        ],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "impressions" }, [
+      _c(
+        "div",
+        { staticClass: "form-group py-2 px-3" },
+        [
+          _c("label", { staticClass: "text-lg" }, [_vm._v("試合について")]),
+          _vm._v(" "),
+          _vm._l(_vm.error.impressions, function(value) {
+            return _c("strong", { staticClass: "error text-red-600" }, [
+              _vm._v(_vm._s(value))
+            ])
+          }),
+          _vm._v(" "),
+          _c("textarea", {
+            staticClass: "form-control",
+            attrs: { name: "impressions", cols: "20", rows: "10" },
+            domProps: { value: _vm.note.impressions }
+          })
+        ],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "formation" }, [
+      _c("div", { staticClass: "form-group py-2 px-3" }, [
+        _c("label", { staticClass: "text-lg" }, [_vm._v("フォーメーション")]),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            staticClass: "form-control",
+            attrs: { name: "formation", id: "" },
+            on: { change: _vm.onChange }
+          },
+          [
+            _c(
+              "option",
+              {
+                attrs: { value: "one" },
+                domProps: { selected: _vm.note.formation == "one" }
+              },
+              [_vm._v("4-4-2")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                attrs: { value: "two" },
+                domProps: { selected: _vm.note.formation == "two" }
+              },
+              [_vm._v("4-2-3-1")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                attrs: { value: "three" },
+                domProps: { selected: _vm.note.formation == "three" }
+              },
+              [_vm._v("4-1-4-1")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                attrs: { value: "four" },
+                domProps: { selected: _vm.note.formation == "four" }
+              },
+              [_vm._v("4-1-2-3")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                attrs: { value: "five" },
+                domProps: { selected: _vm.note.formation == "five" }
+              },
+              [_vm._v("4-2-1-3")]
+            )
+          ]
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "member" }, [
+      _c("div", { staticClass: "form-group py-2 px-3" }, [
+        _c("label", { staticClass: "text-lg" }, [_vm._v("出場選手")]),
+        _vm._v(" "),
+        _c("table", { staticClass: "w-100 table table-bordered" }, [
+          _vm._m(2),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("GK")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member1" },
+                domProps: { value: _vm.member.member1 },
+                on: { input: _vm.inputMember1 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("DF")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member2" },
+                domProps: { value: _vm.member.member2 },
+                on: { input: _vm.inputMember2 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("DF")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member3" },
+                domProps: { value: _vm.member.member3 },
+                on: { input: _vm.inputMember3 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("DF")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member4" },
+                domProps: { value: _vm.member.member4 },
+                on: { input: _vm.inputMember4 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("DF")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member5" },
+                domProps: { value: _vm.member.member5 },
+                on: { input: _vm.inputMember5 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("MF")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member6" },
+                domProps: { value: _vm.member.member6 },
+                on: { input: _vm.inputMember6 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("MF")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member7" },
+                domProps: { value: _vm.member.member7 },
+                on: { input: _vm.inputMember7 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("MF")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member8" },
+                domProps: { value: _vm.member.member8 },
+                on: { input: _vm.inputMember8 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("MF")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member9" },
+                domProps: { value: _vm.member.member9 },
+                on: { input: _vm.inputMember9 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("FW")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member10" },
+                domProps: { value: _vm.member.member10 },
+                on: { input: _vm.inputMember10 }
+              })
+            ])
+          ]),
+          _vm._v(" "),
+          _c("tr", [
+            _c("td", [_vm._v("FW")]),
+            _vm._v(" "),
+            _c("td", { staticClass: "p-0 align-middle" }, [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", name: "member11" },
+                domProps: { value: _vm.member.member11 },
+                on: { input: _vm.inputMember11 }
+              })
+            ])
+          ])
+        ])
+      ])
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "py-2 px-3" }, [
+      _c(
+        "div",
+        {
+          staticClass:
+            "border bg-light py-2 text-base text-center cursor-pointer position-relative sub-member",
+          on: { click: _vm.ChangeSubMemberStatus }
+        },
+        [
+          _vm._v("\n                サブメンバーも入力する\n                "),
+          _vm.subMemberStatus == true
+            ? _c("img", {
+                staticClass: "position-absolute right-3 top-1/3",
+                staticStyle: { width: "15px" },
+                attrs: { src: "/images/plusmark.svg", alt: "" }
+              })
+            : _c("img", {
+                staticClass: "position-absolute right-3 top-1/3",
+                staticStyle: { width: "15px" },
+                attrs: { src: "/images/minusmark.svg", alt: "" }
+              })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "sub-list",
+          class: { subMemberStatus: _vm.subMemberStatus }
+        },
+        [
+          _c("table", { staticClass: "w-100 table table-bordered" }, [
+            _c("tr", [
+              _c("td", [_vm._v("GK")]),
+              _vm._v(" "),
+              _c("td", { staticClass: "p-0 align-middle" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", name: "member12" },
+                  domProps: { value: _vm.member.member12 }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [_vm._v("DF")]),
+              _vm._v(" "),
+              _c("td", { staticClass: "p-0 align-middle" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", name: "member13" },
+                  domProps: { value: _vm.member.member13 }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [_vm._v("DF")]),
+              _vm._v(" "),
+              _c("td", { staticClass: "p-0 align-middle" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", name: "member14" },
+                  domProps: { value: _vm.member.member14 }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [_vm._v("MF")]),
+              _vm._v(" "),
+              _c("td", { staticClass: "p-0 align-middle" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", name: "member15" },
+                  domProps: { value: _vm.member.member15 }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [_vm._v("MF")]),
+              _vm._v(" "),
+              _c("td", { staticClass: "p-0 align-middle" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", name: "member16" },
+                  domProps: { value: _vm.member.member16 }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [_vm._v("FW")]),
+              _vm._v(" "),
+              _c("td", { staticClass: "p-0 align-middle" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", name: "member17" },
+                  domProps: { value: _vm.member.member17 }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [_vm._v("FW")]),
+              _vm._v(" "),
+              _c("td", { staticClass: "p-0 align-middle" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", name: "member18" },
+                  domProps: { value: _vm.member.member18 }
+                })
+              ])
+            ])
+          ])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "comment" }, [
+      _c(
+        "div",
+        { staticClass: "form-group py-2 px-3" },
+        [
+          _c("label", { staticClass: "text-lg" }, [_vm._v("コーチからの一言")]),
+          _vm._v(" "),
+          _vm._l(_vm.error.comment, function(value) {
+            return _c("strong", { staticClass: "error text-red-600" }, [
+              _vm._v(_vm._s(value))
+            ])
+          }),
+          _vm._v(" "),
+          _c("textarea", {
+            staticClass: "form-control",
+            attrs: { disabled: "", name: "comment", cols: "20", rows: "10" }
+          })
+        ],
+        2
+      )
+    ]),
+    _vm._v(" "),
+    _vm._m(3)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "text-lg" }, [
+      _vm._v("日付"),
+      _c(
+        "span",
+        {
+          staticClass: "text-white text-sm px-3 py-1 bg-red-600 ml-3 rounded-sm"
+        },
+        [_vm._v("必須")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("label", { staticClass: "text-lg" }, [
+      _vm._v("場所"),
+      _c(
+        "span",
+        {
+          staticClass: "text-white text-sm px-3 py-1 bg-red-600 ml-3 rounded-sm"
+        },
+        [_vm._v("必須")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", { staticClass: "w-1/5" }, [_vm._v("ポジション")]),
+      _vm._v(" "),
+      _c("th", { staticClass: "w-4/5" }, [_vm._v("名前")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "submit mt-10 mb-28 flex items-center justify-between" },
+      [
+        _c("div", { staticClass: "form-group py-2 px-3 w-3/6" }, [
+          _c("input", {
+            staticClass: "form-control btn btn-primary",
+            attrs: { type: "submit", name: "save", value: "更新する" }
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "form-group py-2 px-3 w-3/6" }, [
+          _c("input", {
+            staticClass: "form-control btn btn-secondary",
+            attrs: { type: "submit", name: "pdf", value: "PDF出力" }
+          })
+        ])
+      ]
+    )
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NoteNew.vue?vue&type=template&id=8cb1129a&":
 /*!**********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/NoteNew.vue?vue&type=template&id=8cb1129a& ***!
@@ -37858,14 +38649,14 @@ var render = function() {
                 _vm._m(2),
                 _vm._v(" "),
                 _vm._l(_vm.error.place, function(value) {
-                  return _c("strong", { staticClass: "error" }, [
+                  return _c("strong", { staticClass: "error text-red-600" }, [
                     _vm._v(_vm._s(value))
                   ])
                 }),
                 _vm._v(" "),
                 _c("input", {
                   staticClass: "form-control",
-                  attrs: { type: "text", name: "place" }
+                  attrs: { type: "text", name: "place", value: "" }
                 })
               ],
               2
@@ -37880,7 +38671,7 @@ var render = function() {
                 _c("label", { staticClass: "text-lg" }, [_vm._v("対戦相手")]),
                 _vm._v(" "),
                 _vm._l(_vm.error.opponent, function(value) {
-                  return _c("strong", { staticClass: "error" }, [
+                  return _c("strong", { staticClass: "error text-red-600" }, [
                     _vm._v(_vm._s(value))
                   ])
                 }),
@@ -37902,13 +38693,13 @@ var render = function() {
                 _c("label", { staticClass: "text-lg" }, [_vm._v("試合結果")]),
                 _vm._v(" "),
                 _vm._l(_vm.error.match_result_home, function(value) {
-                  return _c("strong", { staticClass: "error" }, [
+                  return _c("strong", { staticClass: "error text-red-600" }, [
                     _vm._v(_vm._s(value))
                   ])
                 }),
                 _vm._v(" "),
                 _vm._l(_vm.error.match_result_away, function(value) {
-                  return _c("strong", { staticClass: "error" }, [
+                  return _c("strong", { staticClass: "error text-red-600" }, [
                     _vm._v(_vm._s(value))
                   ])
                 }),
@@ -37929,7 +38720,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _vm._l(_vm.error.url, function(value) {
-                  return _c("strong", { staticClass: "error" }, [
+                  return _c("strong", { staticClass: "error text-red-600" }, [
                     _vm._v(_vm._s(value))
                   ])
                 }),
@@ -37953,7 +38744,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _vm._l(_vm.error.impressions, function(value) {
-                  return _c("strong", { staticClass: "error" }, [
+                  return _c("strong", { staticClass: "error text-red-600" }, [
                     _vm._v(_vm._s(value))
                   ])
                 }),
@@ -38191,7 +38982,7 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _vm._l(_vm.error.comment, function(value) {
-                  return _c("strong", { staticClass: "error" }, [
+                  return _c("strong", { staticClass: "error text-red-600" }, [
                     _vm._v(_vm._s(value))
                   ])
                 }),
@@ -38266,7 +39057,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "flex text-center" }, [
       _c("input", {
         staticClass: "form-control w-1/5",
-        attrs: { type: "number", name: "match_result_home" }
+        attrs: { type: "number", min: "0", name: "match_result_home" }
       }),
       _vm._v(" "),
       _c("span", { staticClass: "w-1/5 text-xl leading-loose" }, [
@@ -38275,7 +39066,7 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("input", {
         staticClass: "form-control w-1/5",
-        attrs: { type: "number", name: "match_result_away" }
+        attrs: { type: "number", min: "0", name: "match_result_away" }
       })
     ])
   },
@@ -38702,11 +39493,15 @@ var staticRenderFns = [
     return _c("div", { staticClass: "sidebar col-lg-2 h-full" }, [
       _c("ul", { staticClass: "text-xl" }, [
         _c("li", [
-          _c("a", { attrs: { href: "" } }, [_vm._v("サッカーノート作成")])
+          _c("a", { attrs: { href: "/notes/new/" } }, [
+            _vm._v("サッカーノート作成")
+          ])
         ]),
         _vm._v(" "),
         _c("li", [
-          _c("a", { attrs: { href: "" } }, [_vm._v("サッカーノート一覧")])
+          _c("a", { attrs: { href: "/notes/" } }, [
+            _vm._v("サッカーノート一覧")
+          ])
         ])
       ])
     ])
@@ -52228,6 +53023,7 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
 Vue.component('note-preview', __webpack_require__(/*! ./components/NotePreview */ "./resources/js/components/NotePreview.vue")["default"]);
 Vue.component('note-new', __webpack_require__(/*! ./components/NoteNew */ "./resources/js/components/NoteNew.vue")["default"]);
+Vue.component('note-edit', __webpack_require__(/*! ./components/NoteEdit */ "./resources/js/components/NoteEdit.vue")["default"]);
 Vue.component('side-bar', __webpack_require__(/*! ./components/SidebarComponent */ "./resources/js/components/SidebarComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -52351,6 +53147,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_template_id_299e239e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/NoteEdit.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/components/NoteEdit.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _NoteEdit_vue_vue_type_template_id_e9671ef2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NoteEdit.vue?vue&type=template&id=e9671ef2& */ "./resources/js/components/NoteEdit.vue?vue&type=template&id=e9671ef2&");
+/* harmony import */ var _NoteEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NoteEdit.vue?vue&type=script&lang=js& */ "./resources/js/components/NoteEdit.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _NoteEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _NoteEdit_vue_vue_type_template_id_e9671ef2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _NoteEdit_vue_vue_type_template_id_e9671ef2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/NoteEdit.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/NoteEdit.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/NoteEdit.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NoteEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./NoteEdit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NoteEdit.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NoteEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/NoteEdit.vue?vue&type=template&id=e9671ef2&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/NoteEdit.vue?vue&type=template&id=e9671ef2& ***!
+  \*****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NoteEdit_vue_vue_type_template_id_e9671ef2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./NoteEdit.vue?vue&type=template&id=e9671ef2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/NoteEdit.vue?vue&type=template&id=e9671ef2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NoteEdit_vue_vue_type_template_id_e9671ef2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NoteEdit_vue_vue_type_template_id_e9671ef2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

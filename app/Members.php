@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Members extends Model
 {
+    public function Notes() {
+        return $this->belongsTo('App\Notes');
+    }
     //
     protected $table = 'members';
     protected $fillable = [
@@ -27,5 +30,6 @@ class Members extends Model
         'member16',
         'member17',
         'member18',
+        'note_id',
     ];
 }

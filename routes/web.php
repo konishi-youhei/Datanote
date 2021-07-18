@@ -35,3 +35,7 @@ Route::post('admin/register', 'Admin\RegisterController@register')->name('admin.
 // ノートについてのルーティングを記述
 Route::get('/notes/new', 'Note\NoteController@new')->name('note.new');
 Route::post('/notes/create', 'Note\NoteController@create')->name('note.create');
+Route::get('/notes/', 'Note\NoteController@index')->name('notes');
+Route::get('/notes/{id}/edit', 'Note\NoteController@edit')->name('note.edit');
+Route::post('/notes/{id}/update', 'Note\NoteController@update')->name('note.update');
+Route::post('/notes/{id}/delete', 'Note\NoteController@destroy')->name('note.delete');

@@ -8,7 +8,7 @@ class Notes extends Model
 {
     //
     public function members() {
-        $this->hasOne('App\Members');
+        return $this->hasOne('App\Members');
     }
     public function user() {
         return $this->belongsTo('App\User');
@@ -25,6 +25,7 @@ class Notes extends Model
         'impressions',
         'created_at',
         'updated_at',
-        'comment'
+        'comment',
+        'formation'
     ];
 }
