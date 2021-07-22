@@ -13,7 +13,7 @@
 
         <div class="flex col-lg-10 create-area">
             <!-- 入力エリア -->
-            <note-new :csrf="{{json_encode(csrf_token())}}" :errors= "{{ $errors }}"></note-new>
+            <note-new :csrf="{{json_encode(csrf_token())}}" :errors= "{{ $errors }}" :old="{{ json_encode(Session::getOldInput()) }}"></note-new>
             <!-- プレビューエリア -->
             <note-preview></note-preview>
         </div>

@@ -92,6 +92,9 @@ export default {
         errors: {
             type: Array,
             required: true,
+        },
+        old: {
+            type: Array,
         }
     },
     data: function() {
@@ -107,6 +110,33 @@ export default {
                 comment:this.errors.comment,
                 formation:this.errors.formation,
             },
+            date: this.old.date,
+            place: this.old.place,
+            opponent: this.old.opponent,
+            match_result_home: this.old.match_result_home,
+            match_result_away: this.old.match_result_away,
+            url: this.old.url,
+            impressions: this.old.impressions,
+            comment: this.old.comment,
+            formation: this.old.formation,
+            member1: this.old.member1,
+            member2: this.old.member2,
+            member3: this.old.member3,
+            member4: this.old.member4,
+            member5: this.old.member5,
+            member6: this.old.member6,
+            member7: this.old.member7,
+            member8: this.old.member8,
+            member9: this.old.member9,
+            member10: this.old.member10,
+            member11: this.old.member11,
+            member12: this.old.member12,
+            member13: this.old.member13,
+            member14: this.old.member14,
+            member15: this.old.member15,
+            member16: this.old.member16,
+            member17: this.old.member17,
+            member18: this.old.member18,
         }
     }
 }
@@ -128,7 +158,7 @@ export default {
                 <div class="form-group py-2 px-3">
                     <label class="text-lg">日付<span class="text-white text-sm px-3 py-1 bg-red-600 ml-3 rounded-sm">必須</span></label>
                     <strong class="error text-red-600" v-for="value in error.date">{{ value }}</strong>
-                    <input type="date" name="date" class="form-control">
+                    <input type="date" name="date" class="form-control" v-model="date">
                 </div>
             </div>
 
@@ -137,7 +167,7 @@ export default {
                 <div class="form-group py-2 px-3">
                     <label class="text-lg">場所<span class="text-white text-sm px-3 py-1 bg-red-600 ml-3 rounded-sm">必須</span></label>
                     <strong class="error text-red-600" v-for="value in error.place">{{ value }}</strong>
-                    <input type="text" name="place" class="form-control" value="">
+                    <input type="text" name="place" class="form-control" v-model="place">
                 </div>
             </div>
 
@@ -146,7 +176,7 @@ export default {
                 <div class="form-group py-2 px-3">
                     <label class="text-lg">対戦相手</label>
                     <strong class="error text-red-600" v-for="value in error.opponent">{{ value }}</strong>
-                    <input type="text" name="opponent" class="form-control">
+                    <input type="text" name="opponent" class="form-control" v-model="opponent">
                 </div>
             </div>
 
@@ -157,9 +187,9 @@ export default {
                     <strong class="error text-red-600" v-for="value in error.match_result_home">{{ value }}</strong>
                     <strong class="error text-red-600" v-for="value in error.match_result_away">{{ value }}</strong>
                     <div class="flex text-center">
-                        <input type="number" min=0 name="match_result_home" class="form-control w-1/5">
+                        <input type="number" min=0 name="match_result_home" class="form-control w-1/5" v-model="match_result_home">
                         <span class="w-1/5 text-xl leading-loose">VS</span>
-                        <input type="number" min=0 name="match_result_away" class="form-control w-1/5">
+                        <input type="number" min=0 name="match_result_away" class="form-control w-1/5" v-model="match_result_away">
                     </div>
                 </div>
             </div>
@@ -169,7 +199,7 @@ export default {
                 <div class="form-group py-2 px-3">
                     <label class="text-lg">試合動画URL</label>
                     <strong class="error text-red-600" v-for="value in error.url">{{ value }}</strong>
-                    <input type="url" name="url" class="form-control">
+                    <input type="url" name="url" class="form-control" v-model="url">
                 </div>
             </div>
 
@@ -178,7 +208,7 @@ export default {
                 <div class="form-group py-2 px-3">
                     <label class="text-lg">試合について</label>
                     <strong class="error text-red-600" v-for="value in error.impressions">{{ value }}</strong>
-                    <textarea name="impressions" cols="20" rows="10" class="form-control"></textarea>
+                    <textarea name="impressions" cols="20" rows="10" class="form-control" v-model="impressions"></textarea>
                 </div>
             </div>
 
@@ -207,47 +237,47 @@ export default {
                         </tr>
                         <tr>
                             <td>GK</td>
-                            <td class="p-0 align-middle"><input type="text" name="member1" class="form-control" @input="inputMember1"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member1" class="form-control" @input="inputMember1" v-model="member1"></td>
                         </tr>
                         <tr>
                             <td>DF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member2" class="form-control" @input="inputMember2"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member2" class="form-control" @input="inputMember2" v-model="member2"></td>
                         </tr>
                         <tr>
                             <td>DF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member3" class="form-control" @input="inputMember3"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member3" class="form-control" @input="inputMember3" v-model="member3"></td>
                         </tr>
                         <tr>
                             <td>DF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member4" class="form-control" @input="inputMember4"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member4" class="form-control" @input="inputMember4" v-model="member4"></td>
                         </tr>
                         <tr>
                             <td>DF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member5" class="form-control" @input="inputMember5"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member5" class="form-control" @input="inputMember5" v-model="member5"></td>
                         </tr>
                         <tr>
                             <td>MF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member6" class="form-control" @input="inputMember6"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member6" class="form-control" @input="inputMember6" v-model="member6"></td>
                         </tr>
                         <tr>
                             <td>MF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member7" class="form-control" @input="inputMember7"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member7" class="form-control" @input="inputMember7" v-model="member7"></td>
                         </tr>
                         <tr>
                             <td>MF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member8" class="form-control" @input="inputMember8"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member8" class="form-control" @input="inputMember8" v-model="member8"></td>
                         </tr>
                         <tr>
                             <td>MF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member9" class="form-control" @input="inputMember9"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member9" class="form-control" @input="inputMember9" v-model="member9"></td>
                         </tr>
                         <tr>
                             <td>FW</td>
-                            <td class="p-0 align-middle"><input type="text" name="member10" class="form-control" @input="inputMember10"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member10" class="form-control" @input="inputMember10" v-model="member10"></td>
                         </tr>
                         <tr>
                             <td>FW</td>
-                            <td class="p-0 align-middle"><input type="text" name="member11" class="form-control" @input="inputMember11"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member11" class="form-control" @input="inputMember11" v-model="member11"></td>
                         </tr>
                     </table>
                 </div>
@@ -264,31 +294,31 @@ export default {
                     <table class="w-100 table table-bordered">
                         <tr>
                             <td>GK</td>
-                            <td class="p-0 align-middle"><input type="text" name="member12" class="form-control"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member12" class="form-control" v-model="member12"></td>
                         </tr>
                         <tr>
                             <td>DF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member13" class="form-control"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member13" class="form-control" v-model="member13"></td>
                         </tr>
                         <tr>
                             <td>DF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member14" class="form-control"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member14" class="form-control" v-model="member14"></td>
                         </tr>
                         <tr>
                             <td>MF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member15" class="form-control"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member15" class="form-control" v-model="member15"></td>
                         </tr>
                         <tr>
                             <td>MF</td>
-                            <td class="p-0 align-middle"><input type="text" name="member16" class="form-control"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member16" class="form-control" v-model="member16"></td>
                         </tr>
                         <tr>
                             <td>FW</td>
-                            <td class="p-0 align-middle"><input type="text" name="member17" class="form-control"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member17" class="form-control" v-model="member17"></td>
                         </tr>
                         <tr>
                             <td>FW</td>
-                            <td class="p-0 align-middle"><input type="text" name="member18" class="form-control"></td>
+                            <td class="p-0 align-middle"><input type="text" name="member18" class="form-control" v-model="member18"></td>
                         </tr>
                     </table>
                 </div>

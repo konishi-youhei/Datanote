@@ -175,6 +175,9 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // DOMPDFを使うため
+        Barryvdh\DomPDF\ServiceProvider::class,
+
     ],
 
     /*
@@ -226,6 +229,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // DOMPDFを使うため
+        'PDF' => Barryvdh\DomPDF\Facade::class,
     ],
 
 ];

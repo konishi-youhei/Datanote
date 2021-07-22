@@ -39,3 +39,11 @@ Route::get('/notes/', 'Note\NoteController@index')->name('notes');
 Route::get('/notes/{id}/edit', 'Note\NoteController@edit')->name('note.edit');
 Route::post('/notes/{id}/update', 'Note\NoteController@update')->name('note.update');
 Route::post('/notes/{id}/delete', 'Note\NoteController@destroy')->name('note.delete');
+
+//// PDF
+//Route::get('/pdf', function() {
+//    $pdf = app('dompdf.wrapper');
+//    $pdf->loadView('new');
+//
+//    return $pdf->download('note.pdf');
+//});

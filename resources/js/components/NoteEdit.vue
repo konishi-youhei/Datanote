@@ -14,13 +14,6 @@ export default {
             this.$store.commit('changeMember9', this.member.member9);
             this.$store.commit('changeMember10', this.member.member10);
             this.$store.commit('changeMember11', this.member.member11);
-            this.$store.commit('changeMember12', this.member.member12);
-            this.$store.commit('changeMember13', this.member.member13);
-            this.$store.commit('changeMember14', this.member.member14);
-            this.$store.commit('changeMember15', this.member.member15);
-            this.$store.commit('changeMember16', this.member.member16);
-            this.$store.commit('changeMember17', this.member.member17);
-            this.$store.commit('changeMember18', this.member.member18);
         })
     },
     methods: {

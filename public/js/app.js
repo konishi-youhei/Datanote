@@ -1956,13 +1956,6 @@ __webpack_require__.r(__webpack_exports__);
       this.$store.commit('changeMember9', this.member.member9);
       this.$store.commit('changeMember10', this.member.member10);
       this.$store.commit('changeMember11', this.member.member11);
-      this.$store.commit('changeMember12', this.member.member12);
-      this.$store.commit('changeMember13', this.member.member13);
-      this.$store.commit('changeMember14', this.member.member14);
-      this.$store.commit('changeMember15', this.member.member15);
-      this.$store.commit('changeMember16', this.member.member16);
-      this.$store.commit('changeMember17', this.member.member17);
-      this.$store.commit('changeMember18', this.member.member18);
     });
   },
   methods: {
@@ -2215,6 +2208,9 @@ __webpack_require__.r(__webpack_exports__);
     errors: {
       type: Array,
       required: true
+    },
+    old: {
+      type: Array
     }
   },
   data: function data() {
@@ -2229,7 +2225,34 @@ __webpack_require__.r(__webpack_exports__);
         impressions: this.errors.impressions,
         comment: this.errors.comment,
         formation: this.errors.formation
-      }
+      },
+      date: this.old.date,
+      place: this.old.place,
+      opponent: this.old.opponent,
+      match_result_home: this.old.match_result_home,
+      match_result_away: this.old.match_result_away,
+      url: this.old.url,
+      impressions: this.old.impressions,
+      comment: this.old.comment,
+      formation: this.old.formation,
+      member1: this.old.member1,
+      member2: this.old.member2,
+      member3: this.old.member3,
+      member4: this.old.member4,
+      member5: this.old.member5,
+      member6: this.old.member6,
+      member7: this.old.member7,
+      member8: this.old.member8,
+      member9: this.old.member9,
+      member10: this.old.member10,
+      member11: this.old.member11,
+      member12: this.old.member12,
+      member13: this.old.member13,
+      member14: this.old.member14,
+      member15: this.old.member15,
+      member16: this.old.member16,
+      member17: this.old.member17,
+      member18: this.old.member18
     };
   }
 });
@@ -38633,8 +38656,25 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.date,
+                      expression: "date"
+                    }
+                  ],
                   staticClass: "form-control",
-                  attrs: { type: "date", name: "date" }
+                  attrs: { type: "date", name: "date" },
+                  domProps: { value: _vm.date },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.date = $event.target.value
+                    }
+                  }
                 })
               ],
               2
@@ -38655,8 +38695,25 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.place,
+                      expression: "place"
+                    }
+                  ],
                   staticClass: "form-control",
-                  attrs: { type: "text", name: "place", value: "" }
+                  attrs: { type: "text", name: "place" },
+                  domProps: { value: _vm.place },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.place = $event.target.value
+                    }
+                  }
                 })
               ],
               2
@@ -38677,8 +38734,25 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.opponent,
+                      expression: "opponent"
+                    }
+                  ],
                   staticClass: "form-control",
-                  attrs: { type: "text", name: "opponent" }
+                  attrs: { type: "text", name: "opponent" },
+                  domProps: { value: _vm.opponent },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.opponent = $event.target.value
+                    }
+                  }
                 })
               ],
               2
@@ -38704,7 +38778,63 @@ var render = function() {
                   ])
                 }),
                 _vm._v(" "),
-                _vm._m(3)
+                _c("div", { staticClass: "flex text-center" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.match_result_home,
+                        expression: "match_result_home"
+                      }
+                    ],
+                    staticClass: "form-control w-1/5",
+                    attrs: {
+                      type: "number",
+                      min: "0",
+                      name: "match_result_home"
+                    },
+                    domProps: { value: _vm.match_result_home },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.match_result_home = $event.target.value
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "w-1/5 text-xl leading-loose" }, [
+                    _vm._v("VS")
+                  ]),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.match_result_away,
+                        expression: "match_result_away"
+                      }
+                    ],
+                    staticClass: "form-control w-1/5",
+                    attrs: {
+                      type: "number",
+                      min: "0",
+                      name: "match_result_away"
+                    },
+                    domProps: { value: _vm.match_result_away },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.match_result_away = $event.target.value
+                      }
+                    }
+                  })
+                ])
               ],
               2
             )
@@ -38726,8 +38856,25 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.url,
+                      expression: "url"
+                    }
+                  ],
                   staticClass: "form-control",
-                  attrs: { type: "url", name: "url" }
+                  attrs: { type: "url", name: "url" },
+                  domProps: { value: _vm.url },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.url = $event.target.value
+                    }
+                  }
                 })
               ],
               2
@@ -38750,8 +38897,25 @@ var render = function() {
                 }),
                 _vm._v(" "),
                 _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.impressions,
+                      expression: "impressions"
+                    }
+                  ],
                   staticClass: "form-control",
-                  attrs: { name: "impressions", cols: "20", rows: "10" }
+                  attrs: { name: "impressions", cols: "20", rows: "10" },
+                  domProps: { value: _vm.impressions },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.impressions = $event.target.value
+                    }
+                  }
                 })
               ],
               2
@@ -38799,16 +38963,35 @@ var render = function() {
               _c("label", { staticClass: "text-lg" }, [_vm._v("出場選手")]),
               _vm._v(" "),
               _c("table", { staticClass: "w-100 table table-bordered" }, [
-                _vm._m(4),
+                _vm._m(3),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("GK")]),
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member1,
+                          expression: "member1"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member1" },
-                      on: { input: _vm.inputMember1 }
+                      domProps: { value: _vm.member1 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member1 = $event.target.value
+                          },
+                          _vm.inputMember1
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38818,9 +39001,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member2,
+                          expression: "member2"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member2" },
-                      on: { input: _vm.inputMember2 }
+                      domProps: { value: _vm.member2 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member2 = $event.target.value
+                          },
+                          _vm.inputMember2
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38830,9 +39032,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member3,
+                          expression: "member3"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member3" },
-                      on: { input: _vm.inputMember3 }
+                      domProps: { value: _vm.member3 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member3 = $event.target.value
+                          },
+                          _vm.inputMember3
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38842,9 +39063,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member4,
+                          expression: "member4"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member4" },
-                      on: { input: _vm.inputMember4 }
+                      domProps: { value: _vm.member4 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member4 = $event.target.value
+                          },
+                          _vm.inputMember4
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38854,9 +39094,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member5,
+                          expression: "member5"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member5" },
-                      on: { input: _vm.inputMember5 }
+                      domProps: { value: _vm.member5 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member5 = $event.target.value
+                          },
+                          _vm.inputMember5
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38866,9 +39125,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member6,
+                          expression: "member6"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member6" },
-                      on: { input: _vm.inputMember6 }
+                      domProps: { value: _vm.member6 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member6 = $event.target.value
+                          },
+                          _vm.inputMember6
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38878,9 +39156,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member7,
+                          expression: "member7"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member7" },
-                      on: { input: _vm.inputMember7 }
+                      domProps: { value: _vm.member7 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member7 = $event.target.value
+                          },
+                          _vm.inputMember7
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38890,9 +39187,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member8,
+                          expression: "member8"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member8" },
-                      on: { input: _vm.inputMember8 }
+                      domProps: { value: _vm.member8 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member8 = $event.target.value
+                          },
+                          _vm.inputMember8
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38902,9 +39218,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member9,
+                          expression: "member9"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member9" },
-                      on: { input: _vm.inputMember9 }
+                      domProps: { value: _vm.member9 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member9 = $event.target.value
+                          },
+                          _vm.inputMember9
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38914,9 +39249,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member10,
+                          expression: "member10"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member10" },
-                      on: { input: _vm.inputMember10 }
+                      domProps: { value: _vm.member10 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member10 = $event.target.value
+                          },
+                          _vm.inputMember10
+                        ]
+                      }
                     })
                   ])
                 ]),
@@ -38926,9 +39280,28 @@ var render = function() {
                   _vm._v(" "),
                   _c("td", { staticClass: "p-0 align-middle" }, [
                     _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.member11,
+                          expression: "member11"
+                        }
+                      ],
                       staticClass: "form-control",
                       attrs: { type: "text", name: "member11" },
-                      on: { input: _vm.inputMember11 }
+                      domProps: { value: _vm.member11 },
+                      on: {
+                        input: [
+                          function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member11 = $event.target.value
+                          },
+                          _vm.inputMember11
+                        ]
+                      }
                     })
                   ])
                 ])
@@ -38968,7 +39341,205 @@ var render = function() {
                 staticClass: "sub-list",
                 class: { subMemberStatus: _vm.subMemberStatus }
               },
-              [_vm._m(5)]
+              [
+                _c("table", { staticClass: "w-100 table table-bordered" }, [
+                  _c("tr", [
+                    _c("td", [_vm._v("GK")]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "p-0 align-middle" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.member12,
+                            expression: "member12"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text", name: "member12" },
+                        domProps: { value: _vm.member12 },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member12 = $event.target.value
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [_vm._v("DF")]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "p-0 align-middle" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.member13,
+                            expression: "member13"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text", name: "member13" },
+                        domProps: { value: _vm.member13 },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member13 = $event.target.value
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [_vm._v("DF")]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "p-0 align-middle" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.member14,
+                            expression: "member14"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text", name: "member14" },
+                        domProps: { value: _vm.member14 },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member14 = $event.target.value
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [_vm._v("MF")]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "p-0 align-middle" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.member15,
+                            expression: "member15"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text", name: "member15" },
+                        domProps: { value: _vm.member15 },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member15 = $event.target.value
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [_vm._v("MF")]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "p-0 align-middle" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.member16,
+                            expression: "member16"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text", name: "member16" },
+                        domProps: { value: _vm.member16 },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member16 = $event.target.value
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [_vm._v("FW")]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "p-0 align-middle" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.member17,
+                            expression: "member17"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text", name: "member17" },
+                        domProps: { value: _vm.member17 },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member17 = $event.target.value
+                          }
+                        }
+                      })
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [_vm._v("FW")]),
+                    _vm._v(" "),
+                    _c("td", { staticClass: "p-0 align-middle" }, [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.member18,
+                            expression: "member18"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { type: "text", name: "member18" },
+                        domProps: { value: _vm.member18 },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.member18 = $event.target.value
+                          }
+                        }
+                      })
+                    ])
+                  ])
+                ])
+              ]
             )
           ]),
           _vm._v(" "),
@@ -39001,7 +39572,7 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _vm._m(6)
+          _vm._m(4)
         ]
       )
     ]
@@ -39054,113 +39625,10 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex text-center" }, [
-      _c("input", {
-        staticClass: "form-control w-1/5",
-        attrs: { type: "number", min: "0", name: "match_result_home" }
-      }),
-      _vm._v(" "),
-      _c("span", { staticClass: "w-1/5 text-xl leading-loose" }, [
-        _vm._v("VS")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control w-1/5",
-        attrs: { type: "number", min: "0", name: "match_result_away" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("tr", [
       _c("th", { staticClass: "w-1/5" }, [_vm._v("ポジション")]),
       _vm._v(" "),
       _c("th", { staticClass: "w-4/5" }, [_vm._v("名前")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("table", { staticClass: "w-100 table table-bordered" }, [
-      _c("tr", [
-        _c("td", [_vm._v("GK")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "p-0 align-middle" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", name: "member12" }
-          })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("tr", [
-        _c("td", [_vm._v("DF")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "p-0 align-middle" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", name: "member13" }
-          })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("tr", [
-        _c("td", [_vm._v("DF")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "p-0 align-middle" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", name: "member14" }
-          })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("tr", [
-        _c("td", [_vm._v("MF")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "p-0 align-middle" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", name: "member15" }
-          })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("tr", [
-        _c("td", [_vm._v("MF")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "p-0 align-middle" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", name: "member16" }
-          })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("tr", [
-        _c("td", [_vm._v("FW")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "p-0 align-middle" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", name: "member17" }
-          })
-        ])
-      ]),
-      _vm._v(" "),
-      _c("tr", [
-        _c("td", [_vm._v("FW")]),
-        _vm._v(" "),
-        _c("td", { staticClass: "p-0 align-middle" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", name: "member18" }
-          })
-        ])
-      ])
     ])
   },
   function() {

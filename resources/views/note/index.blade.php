@@ -18,13 +18,13 @@
             <div class="p-5">
                 <!-- 検索エリア -->
                 <div>
-                    <form action="" class="row">
+                    <form action="{{ route('notes') }}" method="get" class="row">
                         <div class="form-group col-xl-3">
                             <label class="mt-2 text-lg">日付</label>
                             <input type="date" name="date" class="form-control m-1">
                             <label class="mt-2 text-lg">場所</label>
                             <input type="text" name="place" class="form-control m-1">
-                            <input type="submit" name="search" value="検索" class="form-control btn btn-secondary mt-3">
+                            <input type="submit" value="検索" class="form-control btn btn-secondary mt-3">
                         </div>
                     </form>
                 </div>
