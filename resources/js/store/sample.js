@@ -11,7 +11,7 @@ const state = {
     member9: '',
     member10: '',
     member11: '',
-    subMemberStatus: false,
+    subMemberStatus: true,
 }
 
 const getters = {
