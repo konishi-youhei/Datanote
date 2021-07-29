@@ -21,8 +21,10 @@ Auth::routes();
 Route::group(['prefix' => 'admin', 'middleware'=>'auth:admin'], function(){
 
     //管理者ログインしたユーザーのみアクセス可能にしたいルーティングを記述
-    Route::get('home', 'Admin\HomeController@index')->name('admin.home');
-
+//    Route::get('home', 'Admin\HomeController@index')->name('admin.home');
+    Route::get('/', 'Admin\HomeController@index')->name('admin');
+    Route::get('/{id}/edit', 'Admin\HomeController@edit')->name('admin.edit');
+    Route::post('/{id}/update', 'Admin\HomeController@update')->name('admin.update');
 });
 
 // ログインやログアウト後のページに関しては、非ログイン時にアクセスするので'middleware'=>'auth:admin'の外に記述する
@@ -39,11 +41,3 @@ Route::get('/notes/', 'Note\NoteController@index')->name('notes');
 Route::get('/notes/{id}/edit', 'Note\NoteController@edit')->name('note.edit');
 Route::post('/notes/{id}/update', 'Note\NoteController@update')->name('note.update');
 Route::post('/notes/{id}/delete', 'Note\NoteController@destroy')->name('note.delete');
-
-//// PDF
-//Route::get('/pdf', function() {
-//    $pdf = app('dompdf.wrapper');
-//    $pdf->loadView('new');
-//
-//    return $pdf->download('note.pdf');
-//});

@@ -27,6 +27,8 @@ Vue.component('note-preview', require('./components/NotePreview').default);
 Vue.component('note-new', require('./components/NoteNew').default);
 Vue.component('note-edit', require('./components/NoteEdit').default);
 Vue.component('side-bar', require('./components/SidebarComponent').default);
+Vue.component('admin-note-edit', require('./components/AdminNoteEdit').default);
+Vue.component('admin-side-bar', require('./components/AdminSidebarComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

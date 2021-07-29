@@ -343,7 +343,7 @@ export default {
                 <div class="form-group py-2 px-3">
                     <label class="text-lg">コーチからの一言</label>
                     <strong class="error text-red-600" v-for="value in error.comment">{{ value }}</strong>
-                    <textarea disabled name="comment" cols="20" rows="10" class="form-control"></textarea>
+                    <textarea disabled name="comment" cols="20" rows="10" class="form-control" :value="note.comment"></textarea>
                 </div>
             </div>
 

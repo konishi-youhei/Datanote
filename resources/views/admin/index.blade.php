@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
     <!-- フラッシュメッセージ -->
@@ -9,7 +9,7 @@
     @endif
     <div class="container row h-full w-screen">
         <!-- Sidebar -->
-        <side-bar></side-bar>
+        <admin-side-bar></admin-side-bar>
 
         <div class="col-lg-10 create-area">
             <div class="bg-gray-600 p-3">
@@ -42,19 +42,15 @@
                         <tbody>
 
                         @foreach($notes as $note)
-                        <tr>
-                            <td>{{ $note->date }}</td>
-                            <td>{{ $note->place }}</td>
-                            <td>{{ $note->opponent }}</td>
-                            <td>{{ $note->match_result_home }}-{{$note->match_result_away}}</td>
-                            <td>
-                                <a href="" class="btn btn-primary">編集</a>
-                                <form action="" method="post" class="d-inline">
-                                    @csrf
-                                    <button class="btn btn-danger" onclick='return confirm("削除しますか？");'>削除</button>
-                                </form>
-                            </td>
-                        </tr>
+                            <tr>
+                                <td>{{ $note->date }}</td>
+                                <td>{{ $note->place }}</td>
+                                <td>{{ $note->opponent }}</td>
+                                <td>{{ $note->match_result_home }}-{{$note->match_result_away}}</td>
+                                <td>
+                                    <a href="{{ route('admin.edit', $note->id) }}" class="btn btn-primary">編集</a>
+                                </td>
+                            </tr>
                         @endforeach
                         </tbody>
                     </table>
