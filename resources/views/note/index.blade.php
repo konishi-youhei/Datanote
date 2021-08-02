@@ -18,13 +18,14 @@
             <div class="p-5">
                 <!-- 検索エリア -->
                 <div>
-                    <form action="{{ route('notes') }}" method="get" class="row">
-                        <div class="form-group col-xl-3">
-                            <label class="mt-2 text-lg">日付</label>
-                            <input type="date" name="date" class="form-control m-1">
-                            <label class="mt-2 text-lg">場所</label>
-                            <input type="text" name="place" class="form-control m-1">
-                            <input type="submit" value="検索" class="form-control btn btn-secondary mt-3">
+                    <form action="{{ route('notes') }}" method="get" class="row ml-0 mr-0 mb-5">
+                        <div class="w-100">
+                            <label class="mt-2 text-lg ml-1 font-bold">検索</label>
+                        </div>
+                        <div class="form-group d-flex w-4/5">
+                            <input type="date" name="date" class="form-control m-1 w-1/4">
+                            <input type="text" name="place" placeholder="場所" class="form-control m-1 w-1/4">
+                            <input type="submit" value="検索" class="form-control btn btn-secondary mt-1 ml-2 w-1/6">
                         </div>
                     </form>
                 </div>
@@ -48,8 +49,8 @@
                             <td>{{ $note->opponent }}</td>
                             <td>{{ $note->match_result_home }}-{{$note->match_result_away}}</td>
                             <td>
-                                <a href="" class="btn btn-primary">編集</a>
-                                <form action="" method="post" class="d-inline">
+                                <a href="{{ route('note.edit', $note->id) }}" class="btn btn-primary">編集</a>
+                                <form action="{{ route('note.delete', $note->id) }}" method="post" class="d-inline">
                                     @csrf
                                     <button class="btn btn-danger" onclick='return confirm("削除しますか？");'>削除</button>
                                 </form>

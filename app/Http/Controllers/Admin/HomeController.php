@@ -30,7 +30,7 @@ class HomeController extends Controller
     {
         // 検索部分
         $search1 = $request->input('date');
-        $search2 = $request->input('place');
+        $search2 = $request->input('user');
 
         //adminが所属するチームに所属するuserが持つノート一覧
         //クエリ作成
@@ -39,17 +39,20 @@ class HomeController extends Controller
         // adminが所属するteam_id
         $team_id = Auth::guard('admin')->user()->team_id;
         // $tead_idを持つユーザーの一覧
-        $user_id = $user->where('team_id', $team_id)->first();
+        $user_id = $user->where('team_id', $team_id)->get('id');
 
-        //$user_idのノート一覧取得
-        $query->where('user_id', $user_id['id']);
+        //$user_idを持つチーム全員のノート一覧取得
+        $query->whereIn('user_id', $user_id)->orderBy('date', 'desc');
+        $query
+            ->leftJoin('users', 'notes.user_id', '=', 'users.id')
+            ->select('notes.id', 'notes.date', 'notes.opponent', 'users.name', 'notes.comment');
 
-        //キーワードが入力されている場合
+        //検索キーワードが入力されている場合
         if(!empty($search1)){
             $query->where('date', 'like', '%'.$search1.'%');
         }
         if (!empty($search2)) {
-            $query->where('place', 'like', '%'.$search2.'%');
+            $query->where('users.name', 'like', '%'.$search2.'%');
         }
 
         $notes = $query->paginate(10);
