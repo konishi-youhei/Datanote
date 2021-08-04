@@ -31,6 +31,7 @@ class HomeController extends Controller
         // 検索部分
         $search1 = $request->input('date');
         $search2 = $request->input('user');
+        $search3 = $request->input('comment');
 
         //adminが所属するチームに所属するuserが持つノート一覧
         //クエリ作成
@@ -53,6 +54,12 @@ class HomeController extends Controller
         }
         if (!empty($search2)) {
             $query->where('users.name', 'like', '%'.$search2.'%');
+        }
+        if (!empty($search3) && $search3 == "close") {
+            $query->whereNotNull('comment');
+        }
+        if (!empty($search3) && $search3 == "outstanding") {
+            $query->whereNull('comment');
         }
 
         $notes = $query->paginate(10);

@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Barryvdh\DomPDF\PDF;
+use PhpParser\Node\Expr\New_;
 
 class NoteController extends Controller
 {
@@ -35,8 +36,9 @@ class NoteController extends Controller
         $search2 = $request->input('place');
 
         //クエリ作成
-        $query = Notes::query();
+//        $query = Notes::query();
 
+        $query = Auth::user()->notes()->orderBy('date', 'desc');;
         //キーワードが入力されている場合
         if(!empty($search1)){
             $query->where('date', 'like', '%'.$search1.'%');

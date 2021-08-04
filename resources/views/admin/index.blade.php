@@ -24,8 +24,12 @@
                         </div>
                         <div class="form-group d-flex w-4/5">
                             <input type="date" name="date" class="form-control m-1 w-1/4">
-{{--                            <label class="mt-2 text-lg">選手名</label>--}}
                             <input type="text" name="user" placeholder="選手名" class="form-control m-1 w-1/4">
+                            <select name="comment" placeholder="コメント" class="form-control m-1 w-1/6">
+                                <option value='' disabled selected style='display:none;'>コメント</option>
+                                <option value="close">済</option>
+                                <option value="outstanding">未</option>
+                            </select>
                             <input type="submit" value="検索" class="form-control btn btn-secondary mt-1 ml-2 w-1/6">
                         </div>
                     </form>
